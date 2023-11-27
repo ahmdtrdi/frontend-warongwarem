@@ -1,45 +1,25 @@
 import { Button } from "@mui/material";
+import Navbar from "../components/navbar";
 import "./LandingPage.css";
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <div className="navber">
-        <Button
-          className="about-us"
-          color="secondary"
-          size="medium"
-          variant="text"
-        >
-          About Us
-        </Button>
-        <Button className="login" color="warning" variant="contained">
-          Login
-        </Button>
-        <img className="project-status-icon" alt="" src="/project-status.svg" />
-        <b className="warongwarem">
-          <span>Warong</span>
-          <span className="warem">Warem</span>
-        </b>
-        <img className="navber-child" alt="" src="/ellipse-33@2x.png" />
-        <Button className="home" color="secondary" size="medium" variant="text">
-          Home
-        </Button>
-      </div>
+      <Navbar />
       <div className="image">
-        <img className="image-68-icon" alt="" src="/image-68@2x.png" />
+        <img className="image-68-icon" alt="" src="src/assets/image-68@2x.png" />
         <div className="image-child" />
-        <img className="image-item" alt="" src="/rectangle-8926@2x.png" />
-        <img className="image-inner" alt="" src="/rectangle-8928@2x.png" />
+        <img className="image-item" alt="" src="src/assets/top-menu.png" />
+        <img className="image-inner" alt="" src="src/assets/rectangle-8926@2x.png" />
         <img
           className="unsplashm-tzzd5z720-icon"
           alt=""
-          src="/unsplashmtzzd5z720@2x.png"
+          src="src/assets/unsplashmtzzd5z720@2x.png"
         />
         <img
           className="unsplashgkc-xm3vy34-icon"
           alt=""
-          src="/unsplashgkc-xm3vy34@2x.png"
+          src="src/assets/unsplashgkc-xm3vy34@2x.png"
         />
       </div>
       <div className="text-contant">
