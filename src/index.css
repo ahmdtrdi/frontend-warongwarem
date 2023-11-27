@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Compressed:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-grand-hotel: "Grand Hotel";
+  --font-helvetica-compressed: "Roboto";
+  --font-kanit: Kanit;
+
+  /* font sizes */
+  --font-size-21xl: 40px;
+
+  /* Colors */
+  --primary-color: #ff9f0d;
+  --fffffff: #fff;
+}
