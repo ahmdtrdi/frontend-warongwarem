@@ -1,50 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import{BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css'
+import LandingPage from './Pages/LandingPage'
+import About from './Pages/About'
+import Login from './Pages/Login'
 
-function App() {
-  const action = useNavigationType();
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
-
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
-  
-  return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-    </Routes>
-  );
-  
+const App = () => {
+  return(
+    <Router>
+      <Routes>
+        <Route path='/' element={<LandingPage/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/login' element={<Login/>} />
+      </Routes>
+    </Router>
+  )
 }
-
 export default App
