@@ -1,16 +1,24 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 const LPComs = () => {
-    const navigate = useNavigate ()
+  const navigate = useNavigate();
 
-    return (
-        <div className="landing-page">
+  return (
+    <div className="landing-page">
       <div className="navber">
         <div className="home-parent">
-          <button><div className="home">Home</div></button>
+          <button>
+            <div className="home">Home</div>
+          </button>
         </div>
-        <button onClick={() => navigate('/about')}><div className="home">About Us</div></button>
-        <button onClick={() => navigate('/login')}><div className="home">Login</div></button>
-        <button><div className="home">Sign Up</div></button>
+        <button onClick={() => navigate("/about")}>
+          <div className="home">About Us</div>
+        </button>
+        <button onClick={() => navigate("/login")}>
+          <div className="home">Login</div>
+        </button>
+        <button onClick={() => navigate("/sign")}>
+          <div className="home">Sign Up</div>
+        </button>
         <img className="project-status-icon" alt="" src="/project-status.svg" />
       </div>
       <b className="warongwarem">
@@ -42,15 +50,15 @@ const LPComs = () => {
         </div>
         <div className="fine-local-cuisine">Fine Local Cuisine</div>
         <div className="button">
-          <button
-            className="button-child">Reserve a Table
+          <button onClick={() => navigate("/login")} className="button-child">
+            Reserve a Table
           </button>
           <div className="button-item" />
           <div className="button-item" />
         </div>
       </div>
     </div>
-    )
-}
+  );
+};
 
-export default LPComs
+export default LPComs;
