@@ -1,9 +1,7 @@
-import LPComs from "../Components/LPComs"
+import LPComs from "../Components/LPComs";
 
 const LandingPage = () => {
-    return (
-        <LPComs />
-    )
-}
+  return <LPComs />;
+};
 
-export default LandingPage
+export default LandingPage;

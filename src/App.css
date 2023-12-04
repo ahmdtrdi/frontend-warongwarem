@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-=======
 .home {
   position: relative;
   line-height: 24px;
@@ -66,15 +22,15 @@
   height: 13.38px;
 }
 .navber {
-  position:relative;
+  position: relative;
   width: 100%;
   top: -230px;
   right: 53.44%;
   left: 130px;
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   padding: 0 21px;
   box-sizing: border-box;
@@ -82,7 +38,7 @@
 }
 .navber,
 .warem {
-  color:orange
+  color: orange;
 }
 .warongwarem {
   position: absolute;
@@ -174,14 +130,14 @@
   left: 100;
   line-height: 100px;
   font-size: 100px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: inline-block;
 }
 .fine-local-cuisine {
   height: 120%;
   width: 100%;
   top: 0;
-  font-size:30px;
+  font-size: 30px;
   line-height: 60px;
   font-family: var(--font-grand-hotel);
 }
@@ -194,8 +150,8 @@
   bottom: 100%;
   left: 0;
   font-size: 20px;
-  border-radius: 30px;
-  background-color:orange
+  border-radius: 25px;
+  background-color: orange;
 }
 .reserve-a-table {
   position: absolute;
@@ -388,34 +344,19 @@
   border-radius: var(--br-11xl);
   background-color: var(--primary-color);
 }
-.waiter {
-  position: absolute;
-  height: 31.73%;
-  width: 22.59%;
-  top: 33.84%;
-  left: 38.59%;
-  line-height: 24px;
-  display: inline-block;
-}
-.waiter-button {
-  position: absolute;
-  height: 8.75%;
-  width: 20.52%;
-  top: 56.85%;
-  right: 70.52%;
-  bottom: 34.39%;
-  left: 8.96%;
-}
 .manager {
   position: absolute;
-  height: 34.9%;
-  width: 33.25%;
+  height: 100%;
+  width: 75%;
   top: 31.73%;
-  left: 34.52%;
+  left: -137%;
   line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: orange;
   display: inline-block;
 }
-.manager-button,
 .manager-button1 {
   position: absolute;
   height: 8.75%;
@@ -448,9 +389,233 @@
   position: absolute;
   height: 22.08%;
   width: 21.1%;
-  top: 28.57%;
-  left: 0;
+  top: 50%;
+  left: -408px;
   line-height: 24px;
+  font-size: 20px;
+  display: inline-block;
+}
+.frame-input-pass {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 31.73%;
+  left: -40%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  display: inline-block;
+}
+.show-password-checkbox {
+  position: absolute;
+  top: 65%;
+  right: 82%;
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+  outline: none;
+  cursor: pointer;
+}
+.show-password-label {
+  position: absolute;
+  top: 65%;
+  right: 63%;
+}
+
+.textbox-email-child,
+.textbox-password {
+  position: absolute;
+  height: 15.71%;
+  width: 55.66%;
+  top: 84.29%;
+  right: 0;
+  bottom: 0;
+  left: 44.34%;
+}
+.textbox-email-child {
+  height: 100%;
+  width: 85.34%;
+  top: 0;
+  left: 14.66%;
+  border-radius: var(--br-8xl);
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+.email {
+  position: absolute;
+  height: 22.08%;
+  width: 14.66%;
+  top: 70%;
+  left: -425px;
+  line-height: 24px;
+  font-size: 20px;
+  display: inline-block;
+}
+.frame-input-email {
+  position: absolute;
+  height: 100%;
+  width: 53%;
+  top: 31.73%;
+  left: -51%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  display: inline-block;
+}
+.textbox-email {
+  position: absolute;
+  height: 15.71%;
+  width: 51.46%;
+  top: 46.94%;
+  right: 0;
+  bottom: 37.35%;
+  left: 48.54%;
+}
+.customer-button-child {
+  position: absolute;
+  height: 19.3%;
+  width: 28.04%;
+  top: 45.31%;
+  right: 71.96%;
+  bottom: 35.4%;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--primary-color);
+}
+.login-as {
+  position: absolute;
+  height: 29.8%;
+  width: 33.31%;
+  top: 20px;
+  left: 1.5%;
+  font-size: 100px;
+  line-height: 120px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
+}
+.customer-button {
+  position: absolute;
+  height: 45.37%;
+  width: 73.18%;
+  top: 24.35%;
+  right: 17.86%;
+  bottom: 30.28%;
+  left: 8.96%;
+  font-family: var(--font-helvetica);
+}
+.login-customer-child {
+  position: absolute;
+  height: 0.72%;
+  width: 0.42%;
+  top: 14.63%;
+  right: 66.77%;
+  bottom: 84.65%;
+  left: 32.81%;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.ebbdec618a37-removebg-preview-icon {
+  position: absolute;
+  top: 400px;
+  left: 1050px;
+  width: 500px;
+  height: 360px;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.sign-up1 {
+  color: #f49b33;
+}
+.no-account-yet-container {
+  position: absolute;
+  height: 2.31%;
+  width: 20.47%;
+  top: 91.39%;
+  left: 25%;
+  line-height: 24px;
+  display: inline-block;
+  font-family: var(--font-helvetica);
+  text-align: center;
+}
+
+/* Sign In Page */
+.waiter-button-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--primary-color);
+}
+.manager {
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  top: 31.73%;
+  left: -137%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: orange;
+  display: inline-block;
+}
+.manager-button1 {
+  position: absolute;
+  height: 8.75%;
+  width: 20.52%;
+  top: 68.8%;
+  right: 70.52%;
+  bottom: 22.45%;
+  left: 8.96%;
+}
+.manager-button1 {
+  top: 77.59%;
+  right: 23.65%;
+  bottom: 13.65%;
+  left: 55.83%;
+  text-align: center;
+}
+.textbox-password-child {
+  position: absolute;
+  height: 100%;
+  width: 78.9%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 21.1%;
+  border-radius: var(--br-8xl);
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+.password {
+  position: absolute;
+  height: 22.08%;
+  width: 21.1%;
+  top: 50%;
+  left: -408px;
+  line-height: 24px;
+  font-size: 20px;
+  display: inline-block;
+}
+.frame-input-pass {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 31.73%;
+  left: -40%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
   display: inline-block;
 }
 .textbox-email-child,
@@ -476,9 +641,23 @@
   position: absolute;
   height: 22.08%;
   width: 14.66%;
-  top: 28.57%;
-  left: 0;
+  top: 70%;
+  left: -425px;
   line-height: 24px;
+  font-size: 20px;
+  display: inline-block;
+}
+.frame-input-email {
+  position: absolute;
+  height: 100%;
+  width: 53%;
+  top: 31.73%;
+  left: -51%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
   display: inline-block;
 }
 .textbox-email {
@@ -501,25 +680,16 @@
   border-radius: var(--br-11xl);
   background-color: var(--primary-color);
 }
-.customer,
 .login-as {
   position: absolute;
-  height: 7.35%;
-  width: 10.04%;
-  top: 51.22%;
-  left: 8.97%;
-  line-height: 24px;
-  font-family: var(--font-nimbus-sans-becker-pbla);
-  display: inline-block;
-}
-.login-as {
   height: 29.8%;
   width: 33.31%;
-  top: 0;
-  left: 0.93%;
-  font-size: 150px;
+  top: 20px;
+  left: 1.5%;
+  font-size: 100px;
   line-height: 120px;
-  font-family: var(--font-helvetica-compressed);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
 }
 .customer-button {
   position: absolute;
@@ -544,25 +714,24 @@
 }
 .ebbdec618a37-removebg-preview-icon {
   position: absolute;
-  top: 698px;
-  left: 1384px;
-  width: 916px;
-  height: 671px;
+  top: 400px;
+  left: 1050px;
+  width: 500px;
+  height: 360px;
   object-fit: cover;
   opacity: 0.7;
 }
-.sign-up1 {
+.login-1 {
   color: #f49b33;
 }
-.no-account-yet-container {
+.have-an-account-container {
   position: absolute;
   height: 2.31%;
   width: 20.47%;
   top: 91.39%;
-  left: 55.83%;
+  left: 25.5%;
   line-height: 24px;
   display: inline-block;
   font-family: var(--font-helvetica);
   text-align: center;
 }
->>>>>>> master

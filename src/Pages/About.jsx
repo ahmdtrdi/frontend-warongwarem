@@ -1,9 +1,7 @@
-import AboutComs from "../Components/AboutComs"
+import AboutComs from "../Components/AboutComs";
 
 const About = () => {
-    return (
-        <AboutComs />
-    )
-} 
+  return <AboutComs />;
+};
 
-export default About
+export default About;

@@ -1,9 +1,7 @@
-import LoginComs from "../Components/LoginComs"
+import LoginComs from "../Components/LoginComs";
 
 const Login = () => {
-    return (
-        <LoginComs />
-    )
-}
+  return <LoginComs />;
+};
 
-export default Login
+export default Login;

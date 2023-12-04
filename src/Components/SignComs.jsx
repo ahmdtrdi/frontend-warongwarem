@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-const LoginComs = () => {
+const SignComs = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
@@ -8,7 +8,7 @@ const LoginComs = () => {
 
   const handleSignUp = () => {
     if (email && password) {
-      navigate("/reservation");
+      navigate("/login");
     } else {
       alert("Please fill in both email and password");
     }
@@ -23,7 +23,7 @@ const LoginComs = () => {
           onClick={handleSignUp}
           disabled={!email || !password}
         >
-          Login
+          Sign Up
         </button>
       </div>
       <div className="customer-button">
@@ -57,7 +57,7 @@ const LoginComs = () => {
           <b className="email">Email</b>
         </div>
         <div className="customer-button-child" />
-        <div className="login-as">Login</div>
+        <div className="login-as">Sign Up</div>
       </div>
       <div className="navber">
         <div className="home-parent">
@@ -68,10 +68,10 @@ const LoginComs = () => {
         <button onClick={() => navigate("/about")}>
           <div className="home">About Us</div>
         </button>
-        <button>
+        <button onClick={() => navigate("/login")}>
           <div className="home">Login</div>
         </button>
-        <button onClick={() => navigate("/sign")}>
+        <button>
           <div className="home">Sign Up</div>
         </button>
         <img className="project-status-icon" alt="" src="/project-status.svg" />
@@ -86,14 +86,14 @@ const LoginComs = () => {
         alt=""
         src="/5ebbdec618a37removebgpreview-2@2x.png"
       />
-      <b className="no-account-yet-container">
-        <span>{`No account yet? `}</span>
-        <button onClick={() => navigate("/sign")}>
-          <span className="sign-up1">Sign Up</span>
+      <b className="have-an-account-container">
+        <span>{`Already have an account? `}</span>
+        <button onClick={() => navigate("/login")}>
+          <span className="login-1">Login</span>
         </button>
       </b>
     </div>
   );
 };
 
-export default LoginComs;
+export default SignComs;
