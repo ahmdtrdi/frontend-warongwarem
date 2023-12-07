@@ -31,7 +31,7 @@ const LoginComs = () => {
           <div className="textbox-password-child" />
           <input
             className="frame-input-pass"
-            placeholder="*Password"
+            placeholder="*Required"
             type={showPassword ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -49,7 +49,7 @@ const LoginComs = () => {
           <div className="textbox-email-child" />
           <input
             className="frame-input-email"
-            placeholder="*Email"
+            placeholder="*Required"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
