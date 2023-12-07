@@ -416,6 +416,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -430,6 +431,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -489,6 +491,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -655,6 +658,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -784,3 +788,5 @@
 }
 
 /* Pop Up */
+
+/* Reservation Page */

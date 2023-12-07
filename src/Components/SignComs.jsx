@@ -36,7 +36,7 @@ const SignComs = () => {
           <input
             className="frame-input-pass2"
             placeholder="*Required"
-            type="text"
+            type={showPassword ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
