@@ -16,19 +16,22 @@ const AboutComs = () => {
           <img className="check-icon1" alt="" src="/check1.svg" />
           <img className="check-icon2" alt="" src="/check2.svg" />
           <div className="lorem-ipsum-dolor">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            diam pellentesque bibendum non dui volutpat fringilla bibendum.
-            Urna, elit augue urna, vitae feugiat pretium donec id elementum.
-            Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit
-            eu velit in consequat.
+            Sulawesi Utara has such diverse foods and cullinary experiences. Our
+            goal is to share it to as many people as possible in our own unique
+            way of serving it. We bring a twist of modern creativity and
+            technicality into the delicate traditional cuisines we all know and
+            love. WarongWarem provides the best dining experience through our
+            passion of food-making.
           </div>
           <div className="lacus-nisi-et">
             {" "}
-            Lacus nisi, et ac dapibus sit eu velit in consequat.
+            Discover a world of flavors with our diverse menu - reserve your
+            table now.
           </div>
-          <div className="quisque-diam-pellentesque">{` Quisque diam pellentesque bibendum non dui volutpat fringilla `}</div>
+          <div className="quisque-diam-pellentesque">{` Turn an ordinary day into an extraordinary one with our gourmet dishes - book your reservation today. `}</div>
           <div className="lorem-ipsum-dolor1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Indulge in a unique dining experience at our restaurant - secure
+            your table now.
           </div>
         </div>
         <img

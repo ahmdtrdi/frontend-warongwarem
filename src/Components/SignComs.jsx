@@ -5,10 +5,14 @@ const SignComs = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSignUp = () => {
-    if (email && password) {
+    if (email && password && password === confirmPassword) {
       navigate("/login");
+    } else if (password !== confirmPassword) {
+      alert("Password and confirm password do not match");
+      setConfirmPassword("");
     } else {
       alert("Please fill in both email and password");
     }
@@ -21,7 +25,7 @@ const SignComs = () => {
         <button
           className="manager"
           onClick={handleSignUp}
-          disabled={!email || !password}
+          disabled={!email || !password || !confirmPassword}
         >
           Sign Up
         </button>
@@ -30,26 +34,31 @@ const SignComs = () => {
         <div className="textbox-password">
           <div className="textbox-password-child" />
           <input
-            className="frame-input-pass"
-            placeholder="*Password"
-            type={showPassword ? "text" : "password"}
+            className="frame-input-pass2"
+            placeholder="*Required"
+            type="text"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <b className="password">Password</b>
+          <b className="password2">Password</b>
+        </div>
+        <div className="textbox-confirm-password">
+          {" "}
+          <div className="textbox-confirm-password-child" />
           <input
-            className="show-password-checkbox"
-            type="checkbox"
-            checked={showPassword}
-            onChange={(e) => setShowPassword(e.target.checked)}
+            className="frame-input-confirm-pass2"
+            placeholder="*Confirm Password"
+            type={showPassword ? "text" : "password"}
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <label className="show-password-label">Show password</label>
+          <b className="confirm-password2">Confirm Password</b>
         </div>
         <div className="textbox-email">
           <div className="textbox-email-child" />
           <input
             className="frame-input-email"
-            placeholder="*Email"
+            placeholder="*Required"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

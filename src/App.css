@@ -235,7 +235,7 @@
   position: absolute;
   height: 2.6%;
   width: 3.02%;
-  top: 92.5%;
+  top: 102.3%;
   right: 96.98%;
   bottom: 22.72%;
   left: 0;
@@ -245,11 +245,11 @@
 }
 .check-icon1,
 .check-icon2 {
-  top: 102.5%;
+  top: 112.3%;
   bottom: 12.08%;
 }
 .check-icon2 {
-  top: 112.5%;
+  top: 122.3%;
   bottom: 1.44%;
 }
 .lorem-ipsum-dolor {
@@ -260,6 +260,7 @@
   left: 0;
   font-size: 16px;
   line-height: 24px;
+  text-align: justify;
   display: inline-block;
 }
 .lacus-nisi-et,
@@ -267,19 +268,19 @@
 .quisque-diam-pellentesque {
   position: absolute;
   height: 5.53%;
-  width: 75.62%;
-  top: 90%;
+  width: 100%;
+  top: 100%;
   left: 4.8%;
   line-height: 26px;
   display: inline-block;
 }
 .lorem-ipsum-dolor1,
 .quisque-diam-pellentesque {
-  width: 95.2%;
-  top: 100%;
+  width: 100%;
+  top: 120%;
 }
 .lorem-ipsum-dolor1 {
-  width: 82.74%;
+  width: 120%;
   top: 110%;
 }
 .we-are-a-team-of-4-with-the-sa-parent {
@@ -395,6 +396,16 @@
   font-size: 20px;
   display: inline-block;
 }
+.password2 {
+  position: absolute;
+  height: 22.08%;
+  width: 21.1%;
+  top: -20%;
+  left: -408px;
+  line-height: 24px;
+  font-size: 20px;
+  display: inline-block;
+}
 .frame-input-pass {
   position: absolute;
   height: 100%;
@@ -406,6 +417,21 @@
   font-size: 17px;
   border-radius: 15px;
   background-color: var(--primary-color);
+  padding-left: 10px;
+  display: inline-block;
+}
+.frame-input-pass2 {
+  position: absolute;
+  height: 100%;
+  width: 49.5%;
+  top: -50%;
+  left: -40%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  padding-left: 10px;
   display: inline-block;
 }
 .show-password-checkbox {
@@ -464,6 +490,7 @@
   font-size: 17px;
   border-radius: 15px;
   background-color: var(--primary-color);
+  padding-left: 10px;
   display: inline-block;
 }
 .textbox-email {
@@ -618,6 +645,26 @@
   background-color: var(--primary-color);
   display: inline-block;
 }
+.frame-input-confirm-pass2 {
+  position: absolute;
+  height: 16%;
+  width: 27.5%;
+  top: 100%;
+  left: 22%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  padding-left: 10px;
+  display: inline-block;
+}
+.confirm-password2 {
+  font-size: 20px;
+  position: absolute;
+  top: 325px;
+  left: 7px;
+}
 .textbox-email-child,
 .textbox-password {
   position: absolute;
@@ -735,3 +782,5 @@
   font-family: var(--font-helvetica);
   text-align: center;
 }
+
+/* Pop Up */
