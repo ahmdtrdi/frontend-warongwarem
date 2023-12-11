@@ -1,3 +1,11 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .home {
   position: relative;
   line-height: 24px;
@@ -38,7 +46,7 @@
 }
 .navber,
 .warem {
-  color: orange;
+  color: white;
 }
 .warongwarem {
   position: absolute;
@@ -46,6 +54,7 @@
   left: 43.02%;
   font-size: 30px;
   line-height: 32px;
+  color: #f49b33;
   font-family: var(--font-kanit);
 }
 .image-68-icon {
@@ -130,6 +139,7 @@
   left: 100;
   line-height: 100px;
   font-size: 100px;
+  color: #f49b33;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: inline-block;
 }
@@ -416,6 +426,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -430,6 +441,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -489,6 +501,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -655,6 +668,7 @@
   font-family: var(--font-helvetica);
   font-size: 17px;
   border-radius: 15px;
+  border-color: #f49b33;
   background-color: var(--primary-color);
   padding-left: 10px;
   display: inline-block;
@@ -783,4 +797,854 @@
   text-align: center;
 }
 
-/* Pop Up */
+/* Pop Up Sign Up*/
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.element {
+  animation: zoomIn 2s;
+}
+.popup-sign-up-child {
+  position: absolute;
+  top: -110px;
+  left: 550px;
+  border-radius: 5%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  width: 408px;
+  height: 160px;
+  animation: zoomIn 0.3s;
+}
+.signed-up-succesfully {
+  margin: 0;
+}
+.signed-up-succesfully-container {
+  position: absolute;
+  top: -100px;
+  left: 660px;
+  color: black;
+  animation: zoomIn 0.3s;
+}
+.popup-sign-up-inner,
+.popup-sign-up-item {
+  position: absolute;
+  top: 18.75px;
+  left: 32.75px;
+  border-top: 0.5px solid var(--primary);
+  box-sizing: border-box;
+  width: 458.5px;
+  height: 0.5px;
+}
+.popup-sign-up-inner {
+  top: 91.75px;
+  left: 31.75px;
+}
+.ok {
+  position: relative;
+  line-height: 24px;
+}
+.ok-wrapper {
+  position: absolute;
+  top: -15px;
+  left: 715px;
+  border-radius: 10%;
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 29px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--color-white);
+  animation: zoomIn 0.3s;
+}
+.popup-sign-up {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--secondary);
+  font-family: var(--font-segoe-ui);
+}
+
+/* Reservation Page */
+.unsplashlp5mcm6nz5a-icon {
+  position: absolute;
+  height: 49.72%;
+  width: 54.93%;
+  top: 0;
+  right: 45.07%;
+  bottom: 50.28%;
+  left: 0;
+  border-radius: var(--br-7xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.unsplash-gfcyhore48-icon,
+.unsplashclmpc9uhyto-icon,
+.unsplashdphm2u1xq0u-icon,
+.unsplashmmnki8kmxpc-icon,
+.unsplashtzl1ucxg5es-icon {
+  position: absolute;
+  height: 42.74%;
+  width: 37.03%;
+  top: 51.96%;
+  right: 62.97%;
+  bottom: 5.31%;
+  left: 0;
+  border-radius: var(--br-7xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.unsplash-gfcyhore48-icon,
+.unsplashdphm2u1xq0u-icon,
+.unsplashmmnki8kmxpc-icon,
+.unsplashtzl1ucxg5es-icon {
+  height: 32.26%;
+  width: 42.64%;
+  top: 16.76%;
+  right: 0;
+  bottom: 50.98%;
+  left: 57.36%;
+}
+.unsplash-gfcyhore48-icon,
+.unsplashmmnki8kmxpc-icon,
+.unsplashtzl1ucxg5es-icon {
+  height: 31.56%;
+  width: 33.54%;
+  top: 51.96%;
+  right: 27.01%;
+  bottom: 16.48%;
+  left: 39.45%;
+}
+.unsplashmmnki8kmxpc-icon,
+.unsplashtzl1ucxg5es-icon {
+  height: 23.46%;
+  width: 24.43%;
+  top: 51.12%;
+  right: 0.15%;
+  bottom: 25.42%;
+  left: 75.42%;
+}
+.unsplashmmnki8kmxpc-icon {
+  height: 23.18%;
+  top: 76.82%;
+  bottom: 0;
+}
+.decor-image {
+  position: absolute;
+  height: 73.24%;
+  width: 40.23%;
+  top: 17.31%;
+  right: 50.71%;
+  bottom: 9.44%;
+  left: 9.06%;
+}
+.warem1 {
+  color: white;
+}
+.book-a-table-container,
+.warongwarem1 {
+  position: absolute;
+  color: orange;
+}
+.warongwarem1 {
+  top: 0;
+  left: 0;
+  font-size: 40px;
+  line-height: 32px;
+  font-family: var(--font-kanit);
+}
+.book-a-table-container {
+  height: 23.46%;
+  width: 20.64%;
+  top: 76.54%;
+  left: 81%;
+  font-size: 35px;
+  line-height: 56px;
+  display: inline-block;
+  font-family: var(--headingt-2-48);
+}
+.reserve2 {
+  position: relative;
+  line-height: 24px;
+}
+.reserve2-parent {
+  position: absolute;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  gap: 100%;
+  right: 17%;
+  top: -11%;
+}
+.reserve2-parent button {
+  margin: 15px;
+}
+.navbar-child {
+  height: 3.21%;
+  width: 0.54%;
+  top: 19.34%;
+  right: 62.26%;
+  bottom: 77.45%;
+  left: 37.2%;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.navbar {
+  position: absolute;
+}
+.navbar {
+  height: 22.5%;
+  width: 77.71%;
+  top: 6.67%;
+  right: 17.71%;
+  bottom: 70.83%;
+  left: 4.58%;
+  font-size: var(--font-size-11xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.date-icon,
+.time-icon,
+.people-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.table-type-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.date-label,
+.time-label,
+.people-label {
+  position: relative;
+  line-height: 24px;
+}
+
+.table-type-label {
+  position: relative;
+  line-height: 24px;
+}
+.frame-parent {
+  left: 50.7%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px; /* Atur sesuai kebutuhan Anda */
+  font-family: Arial; /* ganti dengan font yang sesuai */
+}
+.date-parent,
+.time-parent,
+.people-parent {
+  border-radius: 8px; /* ganti dengan nilai yang sesuai */
+  border: 2px solid gainsboro; /* ganti dengan warna yang sesuai */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px; /* ganti dengan nilai yang sesuai */
+  gap: 5px;
+}
+.table-type-parent {
+  top: 34.9%;
+  right: 1.5%;
+  position: absolute;
+  border-radius: 8px; /* ganti dengan nilai yang sesuai */
+  border: 2px solid gainsboro; /* ganti dengan warna yang sesuai */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px; /* ganti dengan nilai yang sesuai */
+  gap: 5px;
+}
+.frame-parent {
+  position: absolute;
+  top: 35%;
+  right: 13%;
+  width: 535px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px; /* ganti dengan nilai yang sesuai */
+  font-family: Arial; /* ganti dengan font yang sesuai */
+}
+.have-a-green {
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  top: 50%;
+  left: 40%;
+  font-weight: 600;
+  text-indent: 2px;
+  display: inline-block;
+}
+.tick-green-card-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 11px;
+  right: 0;
+  bottom: 0;
+  left: -28px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+}
+.tick-green-card {
+  position: absolute;
+  height: 80.95%;
+  width: 10.76%;
+  top: 9.52%;
+  right: 89.24%;
+  bottom: 9.52%;
+  left: 0;
+}
+.have-a-green-card {
+  position: absolute;
+  height: 1.94%;
+  width: 8.23%;
+  top: 40.37%;
+  right: 17.66%;
+  bottom: 57.69%;
+  left: 74.11%;
+  color: var(--color-white);
+}
+.notes {
+  position: absolute;
+  height: 2.69%;
+  width: 12.66%;
+  top: 45%;
+  left: 61%;
+  font-weight: 600;
+  text-indent: 2px;
+  display: inline-block;
+}
+.notes-textarea {
+  position: absolute;
+  bottom: 41%;
+  right: 14.7%;
+  width: 350px; /* Mengatur lebar */
+  height: 50px; /* Mengatur tinggi */
+  background-color: #f8f8f8; /* Mengatur warna latar belakang */
+  border: 1px solid #ccc; /* Mengatur border */
+  border-radius: 4px; /* Mengatur sudut bulat */
+  padding: 10px; /* Mengatur padding */
+  font-size: 14px; /* Mengatur ukuran font */
+  color: #333; /* Mengatur warna teks */
+}
+.reservation-customer-page-child {
+  position: absolute;
+  top: 507px;
+  left: 1194px;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  width: 462px;
+  height: 82px;
+}
+.span {
+  color: #333;
+}
+.your-information1 {
+  position: absolute;
+  height: 71.73%;
+  width: 60.79%;
+  top: 30%;
+  left: -4%;
+  font-weight: 600;
+  text-indent: 2px;
+  display: inline-block;
+  color: var(--color-silver);
+}
+.your-information-child,
+.your-information-item {
+  position: absolute;
+  top: 35.54px;
+  left: 1.4px;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  width: 460.19px;
+  height: 54.68px;
+}
+.full-name-input,
+.phone-number-input {
+  position: absolute;
+  bottom: -125%;
+  right: 21%;
+  width: 360px; /* Mengatur lebar */
+  height: 50px; /* Mengatur tinggi */
+  background-color: #f8f8f8; /* Mengatur warna latar belakang */
+  border: 1px solid #ccc; /* Mengatur border */
+  border-radius: 4px; /* Mengatur sudut bulat */
+  padding: 5px; /* Mengatur padding */
+  font-size: 14px; /* Mengatur ukuran font */
+  color: #333; /* Mengatur warna teks */
+}
+.your-information-item {
+  top: 102.53px;
+}
+.full-name,
+.phone-number {
+  position: absolute;
+  top: 49.5px;
+  left: 26.6px;
+  display: inline-block;
+  width: 409px;
+  height: 30px;
+}
+.phone-number {
+  top: 116.5px;
+}
+.your-information {
+  position: absolute;
+  height: 14.56%;
+  width: 24.04%;
+  top: 55.79%;
+  right: 13.7%;
+  bottom: 29.66%;
+  left: 62.26%;
+  color: var(--color-darkgray);
+}
+.note-use-62 {
+  text-indent: 2px;
+  margin: 0;
+}
+.your-information2 {
+  position: absolute;
+  height: 6.39%;
+  width: 30%;
+  top: 82.5%;
+  left: 59.9%;
+  font-weight: 600;
+  display: inline-block;
+}
+.reserve-button-child {
+  position: absolute; /* posisi tombol */
+  top: 95%; /* posisi tombol dari atas */
+  left: 73%; /* posisi tombol dari kiri */
+  transform: translate(-50%, -50%); /* pusatkan tombol */
+  width: 375px; /* lebar tombol */
+  height: 50px; /* tinggi tombol */
+  background-color: orange; /* warna latar belakang tombol */
+  color: white; /* warna teks tombol */
+  text-align: center; /* posisi teks di tengah tombol */
+  border-radius: 8px; /* membuat sudut tombol bulat */
+  font-size: 20px; /* ukuran font teks tombol */
+}
+
+/* Logout Pop Up */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.logout-popup-customer-child {
+  position: absolute;
+  top: 10px;
+  left: 550px;
+  border-radius: 5%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  width: 408px;
+  height: 160px;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
+}
+.are-you-sure {
+  position: absolute;
+  width: 300px;
+  top: 20%;
+  left: 605px;
+  font-size: 18px;
+  color: black;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
+}
+.logout-popup-customer-inner,
+.logout-popup-customer-item {
+  position: absolute;
+  top: 18.75px;
+  left: 32.75px;
+  border-top: 0.5px solid var(--primary);
+  box-sizing: border-box;
+  width: 458.5px;
+  height: 0.5px;
+}
+.logout-popup-customer-inner {
+  top: 93.75px;
+}
+.yes {
+  position: relative;
+  line-height: 24px;
+}
+.no-wrapper,
+.yes-wrapper {
+  position: absolute;
+  top: 107px;
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-10xl);
+}
+.yes-wrapper {
+  height: 40px;
+  width: 75px;
+  left: 815px;
+  background-color: #6cc824;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
+}
+.no-wrapper {
+  height: 40px;
+  width: 75px;
+  left: 620px;
+  background-color: #f32105;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
+}
+.logout-popup-customer {
+  position: relative;
+  width: 100%;
+  height: 168px;
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-segoe-ui);
+}
+.logout-popup-customer-child.closing,
+.are-you-sure.closing,
+.logout-popup-customer-inner.closing,
+.logout-popup-customer-item.closing,
+.yes.closing,
+.no-wrapper.closing,
+.yes-wrapper.closing,
+.logout-popup-customer.closing {
+  animation: zoomOut 0.3s;
+  animation-fill-mode: forwards;
+}
+
+/* Costumer Service */
+.contact-us {
+  position: absolute;
+  top: 180px;
+  left: 700px;
+  text-transform: uppercase;
+  color: orange;
+  font-size: 25px;
+}
+.submit {
+  position: relative;
+  line-height: 24px;
+}
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.submit-button-child {
+  position: absolute;
+  width: 20%;
+  background-color: orange; /* Warna latar belakang */
+  color: white;
+  top: 53%;
+  left: 61.5%;
+  text-align: center; /* Penjajaran teks */
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px; /* Border */
+}
+.full-name1 {
+  position: absolute;
+  top: -120%;
+  left: 0%;
+  font-size: 15px;
+  color: var(--tertiary);
+}
+.full-name-cs-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 783px;
+  height: 76px;
+  font-size: var(--font-size-sm);
+  color: var(--sub);
+}
+.leave-a-message {
+  position: absolute;
+  top: -48%;
+  right: 42%;
+  font-size: 15px;
+  color: var(--tertiary);
+}
+.phone-number1 {
+  position: absolute;
+  top: -650%;
+  left: 0%;
+  font-size: 15px;
+  color: var(--tertiary);
+}
+.phone-number-wrapper1 {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 150px;
+  height: 16px;
+}
+.group-item {
+  position: absolute;
+  height: 200%;
+  width: 210%;
+  top: -470%;
+  left: -3%;
+  background-color: #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.group-child {
+  position: absolute;
+  height: 50%;
+  width: 40%;
+  top: -85%;
+  left: -0.5%;
+  background-color: #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.message-input {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  top: -33%;
+  right: 25%;
+  bottom: -0.92%;
+  background-color: #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.group-parent {
+  position: absolute;
+  top: 336px;
+  left: 336px;
+  width: 1249px;
+  height: 192px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--tertiary);
+}
+.unsplashfdlzbwip0am-iconn {
+  position: absolute;
+  bottom: -3%;
+  left: 1050px;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+}
+.unsplashjpkfc5-d-di-iconn {
+  position: absolute;
+  bottom: -3%;
+  left: 525px;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+}
+.unsplashmaqz3x-8-l0-iconn {
+  position: absolute;
+  bottom: -3%;
+  left: 0px;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Booking Pop Up */
+.booking-popup-customer-page-child {
+  position: absolute;
+  top: 50px; /* Geser popup 50px ke bawah */
+  left: 560px; /* Geser popup 50px ke kanan */
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(25px);
+  width: 400px; /* Lebarkan popup menjadi 600px */
+  height: 400px; /* Tinggikan popup menjadi 600px */
+}
+.material-symbolstable-bar-icon {
+  position: absolute;
+  top: 290px;
+  left: 49px;
+  width: 20px;
+  height: 20px;
+}
+.indoor {
+  position: absolute;
+  top: 288px;
+  left: 80px;
+}
+.notes-tidak-pake {
+  position: absolute;
+  top: 342px;
+  left: 49px;
+  display: inline-block;
+  width: 422px;
+  height: 73px;
+}
+.frame-icon {
+  position: absolute;
+  top: 30px;
+  left: 221px;
+  width: 80px;
+  height: 80px;
+}
+.sent {
+  color: var(--primary);
+}
+.table-booking-request-container {
+  position: absolute;
+  top: 121px;
+  left: 129px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.b,
+.names {
+  position: absolute;
+  top: 178px;
+  left: 129px;
+}
+.b {
+  left: 239px;
+}
+.material-symbolsdate-range-icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.december-2023 {
+  position: absolute;
+  top: 0;
+  left: 31px;
+}
+.material-symbolsdate-range-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 269px;
+  height: 24px;
+}
+.people {
+  position: absolute;
+  top: 0;
+  left: 28px;
+}
+.group-parent-1,
+.mdiperson-multiple-parent {
+  position: absolute;
+  top: 0;
+  left: 312px;
+  width: 97px;
+  height: 24px;
+}
+.group-parent-1 {
+  top: 239px;
+  left: 49px;
+  width: 409px;
+}
+.booking-popup-customer-page-child1,
+.booking-popup-customer-page-inner,
+.booking-popup-customer-page-item,
+.line-div {
+  position: absolute;
+  top: 157.75px;
+  left: 31.75px;
+  border-top: 0.5px solid var(--primary);
+  box-sizing: border-box;
+  width: 458.5px;
+  height: 0.5px;
+}
+.booking-popup-customer-page-child1,
+.booking-popup-customer-page-inner,
+.line-div {
+  top: 216.75px;
+}
+.booking-popup-customer-page-child1,
+.line-div {
+  top: 331.75px;
+}
+.booking-popup-customer-page-child1 {
+  top: 422.75px;
+  left: 30.75px;
+}
+.done {
+  position: relative;
+  line-height: 24px;
+}
+.done-wrapper {
+  position: absolute;
+  top: 437px;
+  left: 211px;
+  border-radius: var(--br-8xs);
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 29px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-white);
+}
+.booking-popup-customer-page {
+  position: relative;
+  width: 100%;
+  height: 498px;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--secondary);
+  font-family: var(--font-segoe-ui);
+}
