@@ -1,15 +1,34 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios"; // Import axios
+import PopupSignUp from "./PopSignComs";
+
 const SignComs = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
-  const handleSignUp = () => {
+  const handleSignUp = async () => {
+    // Tambahkan async
     if (email && password && password === confirmPassword) {
-      navigate("/login");
+      try {
+        // Ganti dengan endpoint dan data yang sesuai
+        const response = await axios.post("", {
+          email,
+          password,
+          confirmPassword,
+        });
+
+        // Lakukan sesuatu dengan response jika perlu
+
+        setShowPopup(true);
+      } catch (error) {
+        console.error(error);
+        // Tampilkan pesan error jika terjadi masalah
+      }
     } else if (password !== confirmPassword) {
       alert("Password and confirm password do not match");
       setConfirmPassword("");
@@ -19,7 +38,7 @@ const SignComs = () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page" style={{ animation: "fadeIn 1s" }}>
       <div className="manager-button1">
         <div className="waiter-button-child" />
         <button
@@ -80,7 +99,7 @@ const SignComs = () => {
         <button onClick={() => navigate("/login")}>
           <div className="home">Login</div>
         </button>
-        <button>
+        <button onClick={() => window.location.reload()}>
           <div className="home">Sign Up</div>
         </button>
         <img className="project-status-icon" alt="" src="/project-status.svg" />
@@ -101,6 +120,7 @@ const SignComs = () => {
           <span className="login-1">Login</span>
         </button>
       </b>
+      {showPopup && <PopupSignUp />}
     </div>
   );
 };

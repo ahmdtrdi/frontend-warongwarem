@@ -3,10 +3,10 @@ const LPComs = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="landing-page">
+    <div className="landing-page" style={{ animation: "fadeIn 1s" }}>
       <div className="navber">
         <div className="home-parent">
-          <button>
+          <button onClick={() => window.location.reload()}>
             <div className="home">Home</div>
           </button>
         </div>

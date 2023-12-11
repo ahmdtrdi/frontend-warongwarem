@@ -15,7 +15,7 @@ const LoginComs = () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page" style={{ animation: "fadeIn 1s" }}>
       <div className="manager-button1">
         <div className="waiter-button-child" />
         <button
@@ -68,7 +68,7 @@ const LoginComs = () => {
         <button onClick={() => navigate("/about")}>
           <div className="home">About Us</div>
         </button>
-        <button>
+        <button onClick={() => window.location.reload()}>
           <div className="home">Login</div>
         </button>
         <button onClick={() => navigate("/sign")}>

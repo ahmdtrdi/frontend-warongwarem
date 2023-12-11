@@ -8,7 +8,7 @@ const PopupSignUp = () => {
   }, [navigate]);
 
   return (
-    <div className="popup-sign-up">
+    <div className="popup-sign-up" style={{ position: "fixed", zIndex: 1000 }}>
       <div className="popup-sign-up-child" />
       <b className="signed-up-succesfully-container">
         <p className="signed-up-succesfully">Signed Up Succesfully!</p>

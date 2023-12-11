@@ -3,7 +3,7 @@ const AboutComs = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="about-us">
+    <div className="about-us" style={{ animation: "fadeIn 1s" }}>
       <div className="about-us1">
         <div className="we-are-a-team-of-4-with-the-sa-parent">
           <b className="we-are-a">
@@ -56,7 +56,7 @@ const AboutComs = () => {
             <div className="home">Home</div>
           </button>
         </div>
-        <button>
+        <button onClick={() => window.location.reload()}>
           <div className="home">About Us</div>
         </button>
         <button onClick={() => navigate("/login")}>
