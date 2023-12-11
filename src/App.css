@@ -6,6 +6,9 @@
     opacity: 1;
   }
 }
+body {
+  background-color: #000;
+}
 .home {
   position: relative;
   line-height: 24px;
@@ -32,9 +35,6 @@
 .navber {
   position: relative;
   width: 100%;
-  top: -230px;
-  right: 53.44%;
-  left: 130px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -44,6 +44,29 @@
   box-sizing: border-box;
   gap: 83px;
 }
+
+/* Hide all children elements of .navber by default */
+.navber > * {
+  display: none;
+}
+
+/* Show the first child (assumed to be the burger icon) */
+.navber > :first-child {
+  display: block;
+}
+
+/* For viewports larger than 600px */
+@media (min-width: 601px) {
+  .navber {
+    flex-direction: row;
+  }
+
+  /* Show all children elements of .navber */
+  .navber > * {
+    display: block;
+  }
+}
+
 .navber,
 .warem {
   color: white;

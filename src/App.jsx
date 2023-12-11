@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route }
+from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
 import "./App.css";
 import LandingPage from "./Pages/LandingPage";
 import About from "./Pages/About";
