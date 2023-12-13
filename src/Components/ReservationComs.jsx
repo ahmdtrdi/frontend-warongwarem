@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import LogoutPopupCustomer from "./PopLogoutComs";
 import BookingPopUpCustomerPage from "./PopBookingComs";
 import axios from 'axios';
+// import { accessToken } from './LoginComs';
 
 const instance = axios.create({
   baseURL: 'http://localhost:8000/api',
@@ -79,15 +80,20 @@ const ReservationComs = () => {
       console.log("Reserve button clicked");
 
       try {
-        let accessToken = localStorage.getItem('jwtToken');
+        const jwtToken = localStorage.getItem('jwtToken');
+        /*
+        // let accessToken = data;
         console.log(accessToken);
         if (!accessToken) {
           // Show an error message
           console.error("User is not authenticated");
           return;  // Important to prevent the rest of the function from executing
         }
+        */
 
-        const response = await instance.post(
+        // let accessToken = localStorage.getItem('jwtToken');
+
+        const response = await axios.post(
           'http://localhost:8000/api/reservations',
           {
             name: fullName,
@@ -100,7 +106,7 @@ const ReservationComs = () => {
           },
           {
             headers: {
-              'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+              'Authorization': `Bearer ${jwtToken}`,
             },
           }
         );

@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+// export let accessToken;
+
 const LoginComs = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -34,14 +36,11 @@ const LoginComs = () => {
           body: JSON.stringify({ email, password })
         });
 
-        if (!response.ok) {
-          throw new Error('Invalid email or password');
-        }
-
         const data = await response.json();
+        const jwtToken = data.access_token;
 
-        // Save the token to local storage
-        localStorage.setItem('jwtToken', data.token);
+        // Save the JWT to local storage
+        localStorage.setItem('jwtToken', jwtToken);
 
         navigate("/reservation");
       } catch (error) {
