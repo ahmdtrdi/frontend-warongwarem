@@ -8,12 +8,13 @@ const LoginComs = () => {
 
   const handleSignUp = () => {
     if (email && password) {
-      navigate("/reservation");
-    } else {
+      navigate("/waiter");
+    } 
+    else {
       alert("Please fill in both email and password");
     }
   };
-
+  
   return (
     <div className="login-page">
       <div className="manager-button1">
