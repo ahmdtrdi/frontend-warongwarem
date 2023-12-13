@@ -31,10 +31,13 @@ const AboutComs = () => {
                 Discover a world of flavors with our diverse menu - reserve your
                 table now.
               </div>
-              <div className="quisque-diam-pellentesque">{` Turn an ordinary day into an extraordinary one with our gourmet dishes - book your reservation today. `}</div>
+              <div className="quisque-diam-pellentesque">
+                Find us{" "}
+                <a href="https://maps.app.goo.gl/BBjPY77cmLJYZBcf6">HERE !!!</a>
+              </div>
               <div className="lorem-ipsum-dolor1">
-                Indulge in a unique dining experience at our restaurant - secure
-                your table now.
+                We delightfully serve you from{" "}
+                <span className="time-x">08:00 to 20:00</span>.
               </div>
             </div>
             <img

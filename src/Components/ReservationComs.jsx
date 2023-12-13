@@ -12,10 +12,21 @@ const ReservationComs = () => {
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [people, setPeople] = useState("");
-  const [tableType, setTableType] = useState("");
+  const [people, setPeople] = useState("1");
+  const [tableType, setTableType] = useState("Indoor");
   const [showBookingPopup, setShowBookingPopup] = useState(false);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
+
+  const handleTimeChange = (e) => {
+    const newTime = e.target.value;
+    const [hours, minutes] = newTime.split(":").map(Number);
+
+    if ((hours >= 8 && hours < 20) || (hours === 20 && minutes === 0)) {
+      setTime(newTime);
+    } else {
+      alert("Please input time between 08.00-20.00");
+    }
+  };
 
   const handlePhoneNumberChange = (e) => {
     const newPhoneNumber = e.target.value;
@@ -167,7 +178,7 @@ const ReservationComs = () => {
                 type="time"
                 className="time-input"
                 value={time}
-                onChange={(e) => setTime(e.target.value)}
+                onChange={handleTimeChange}
                 disabled={isFormDisabled}
               />
             </div>
