@@ -53,29 +53,46 @@ const SignComs = () => {
     }
   };
 
-  const handleSignUp = async () => {
-    if (email && password && password === confirmPassword) {
-      if (!emailError && !passwordError && !confirmPasswordError) {
-        try {
-          const response = await axios.post("", {
-            email,
-            password,
-            confirmPassword,
-          });
-          setShowPopup(true);
-        } catch (error) {
-          console.error(error);
-        }
-      } else {
-        alert("Please enter a valid email and password");
-      }
-    } else if (password !== confirmPassword) {
-      alert("Password and confirm password do not match");
-      setConfirmPassword("");
+  const registerUser = async (email, password) => {
+    const response = await fetch('http://127.0.0.1:8000/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+
+    if (response.status === 422) {
+      alert('Email already registered');
     } else {
-      alert("Please fill in both email and password");
+      const responseBody = await response.json();
+      console.log(responseBody);
+
+      // Continue with registration process
+      // return response.json();
+      return responseBody;
     }
-  };
+  }
+
+  const handleSignUp = async () => {
+    let response;
+    if (email && password && password === confirmPassword) {
+        try {
+            const response = await registerUser(email, password);
+           
+            if (response && response.message.trim() === 'User registered successfully') {
+                setShowPopup(true);
+            }
+        } catch (error) {
+            console.error('Error in handleSignUp:', error);
+            console.log('Response in handleSignUp:', response);
+        }
+    } else if (password !== confirmPassword) {
+        alert("Password and confirm password do not match");
+        setConfirmPassword("");
+    } else {
+        alert("Please fill in both email and password");
+    }
+};
+
 
   return (
     <div className="login-page" style={{ animation: "fadeIn 1s" }}>

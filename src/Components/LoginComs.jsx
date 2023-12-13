@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 const LoginComs = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -24,12 +25,27 @@ const LoginComs = () => {
     }
   };
 
-  const handleSignUp = () => {
+  const handleLogin = async () => {
     if (email && password) {
-      if (!emailError) {
+      try {
+        const response = await fetch('http://localhost:8000/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        if (!response.ok) {
+          throw new Error('Login failed');
+        }
+
+        const data = await response.json();
+
+        // Save the token to local storage or context
+        localStorage.setItem('token', data.token);
+
         navigate("/reservation");
-      } else {
-        alert("Please enter a valid email");
+      } catch (error) {
+        alert(error.message);
       }
     } else {
       alert("Please fill in both email and password");
@@ -44,7 +60,7 @@ const LoginComs = () => {
             <div className="waiter-button-child" />
             <button
               className="manager"
-              onClick={handleSignUp}
+              onClick={handleLogin}
               disabled={!email || !password}
             >
               Login
