@@ -12,8 +12,8 @@ const ReservationComs = () => {
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [people, setPeople] = useState("");
-  const [tableType, setTableType] = useState("");
+  const [people, setPeople] = useState("1");
+  const [tableType, setTableType] = useState("Indoor");
   const [showBookingPopup, setShowBookingPopup] = useState(false);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
@@ -44,8 +44,7 @@ const ReservationComs = () => {
   const isReserveDisabled =
     !fullName.trim() ||
     !phoneNumber.trim() ||
-    (!isRentChecked &&
-      (!date.trim() || !time.trim() || people === "" || tableType === "")) ||
+    (!isRentChecked && (!date.trim() || !time.trim() || !people.trim() || !tableType.trim())) ||
     (isRentChecked && (!date.trim() || !time.trim()));
 
   const handleLogoutClick = () => {
@@ -57,10 +56,67 @@ const ReservationComs = () => {
   };
 
   const handleReserve = () => {
-    if (!isReserveDisabled) {
+    if (isReserveDisabled) {
+      window.alert("Please fill all the fields");
+    } else {
       console.log("Reserve button clicked");
-      setShowBookingPopup(true);
-      setIsFormDisabled(true); // Nonaktifkan form saat popup booking muncul
+
+      // Prepare the data to be sent
+      const data = {
+        name: fullName,
+        phone_number: phoneNumber,
+        date,
+        time,
+        people: isRentChecked ? 0 : parseInt(people),
+        tableType: isRentChecked ? "Rent the place" : tableType,
+        notes
+      };
+
+      let accessToken;
+      const tokenCookie = document.cookie.split('; ').find(row => row.startsWith('token='));
+      if (tokenCookie) {
+        accessToken = tokenCookie.split('=')[1];
+      } else {
+        // Redirect the user to the login page
+        window.location.href = "/login";
+        // Or show an error message
+        console.error("User is not authenticated");
+        // Or handle it in another way that makes sense for your application
+      }
+
+
+      // Make a POST request to the API endpoint with the access token
+      fetch("http://127.0.0.1:8000/api/reservations", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${accessToken}`
+        },
+        body: JSON.stringify(data)
+      })
+        .then((response) => {
+          // If the server returns a non-200 status code, throw an error
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          // Log the raw text of the response
+          return response.text().then(text => {
+            console.log(text);
+            return text;
+          });
+        })
+        .then((text) => {
+          // Parse the text as JSON
+          const data = JSON.parse(text);
+
+          console.log("Success:", data);
+          setShowBookingPopup(true);
+          setIsFormDisabled(true); // Disable the form when the booking popup appears
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     }
   };
 
@@ -269,7 +325,7 @@ const ReservationComs = () => {
               <button
                 className="reserve-button-child"
                 onClick={handleReserve}
-                disabled={isReserveDisabled}
+              // disabled={isReserveDisabled}
               >
                 <b className="reserve">RESERVE</b>
               </button>

@@ -33,16 +33,16 @@ const LoginComs = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })
         });
-
+  
         if (!response.ok) {
-          throw new Error('Login failed');
+          throw new Error('Invalid email or password');
         }
-
+  
         const data = await response.json();
-
-        // Save the token to local storage or context
-        localStorage.setItem('token', data.token);
-
+  
+        // Save the token to an HttpOnly cookie
+        document.cookie = `token=${data.token}; Secure; HttpOnly`;
+  
         navigate("/reservation");
       } catch (error) {
         alert(error.message);
