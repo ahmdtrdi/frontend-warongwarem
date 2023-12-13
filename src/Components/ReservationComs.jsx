@@ -2,6 +2,12 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import LogoutPopupCustomer from "./PopLogoutComs";
 import BookingPopUpCustomerPage from "./PopBookingComs";
+import axios from 'axios';
+
+const instance = axios.create({
+  baseURL: 'http://localhost:8000/api',
+  timeout: 5000,
+});
 
 const ReservationComs = () => {
   const navigate = useNavigate();
@@ -55,69 +61,48 @@ const ReservationComs = () => {
     setShowLogoutPopup(false);
   };
 
-  const handleReserve = () => {
+  const handleReserve = async () => {
     if (isReserveDisabled) {
       window.alert("Please fill all the fields");
     } else {
       console.log("Reserve button clicked");
 
-      // Prepare the data to be sent
-      const data = {
-        name: fullName,
-        phone_number: phoneNumber,
-        date,
-        time,
-        people: isRentChecked ? 0 : parseInt(people),
-        tableType: isRentChecked ? "Rent the place" : tableType,
-        notes
-      };
+      try {
+        let accessToken = localStorage.getItem('jwtToken');
+        console.log(accessToken);
+        if (!accessToken) {
+          // Show an error message
+          console.error("User is not authenticated");
+          return;  // Important to prevent the rest of the function from executing
+        }
 
-      let accessToken;
-      const tokenCookie = document.cookie.split('; ').find(row => row.startsWith('token='));
-      if (tokenCookie) {
-        accessToken = tokenCookie.split('=')[1];
-      } else {
-        // Redirect the user to the login page
-        window.location.href = "/login";
-        // Or show an error message
-        console.error("User is not authenticated");
-        // Or handle it in another way that makes sense for your application
-      }
-
-
-      // Make a POST request to the API endpoint with the access token
-      fetch("http://127.0.0.1:8000/api/reservations", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${accessToken}`
-        },
-        body: JSON.stringify(data)
-      })
-        .then((response) => {
-          // If the server returns a non-200 status code, throw an error
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        const response = await instance.post(
+          'http://localhost:8000/api/reservations',
+          {
+            name: fullName,
+            phone_number: phoneNumber,
+            date,
+            time,
+            people: isRentChecked ? 0 : parseInt(people),
+            tableType: isRentChecked ? "Rent the place" : tableType,
+            notes
+          },
+          {
+            headers: {
+              'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
+            },
           }
+        );
 
-          // Log the raw text of the response
-          return response.text().then(text => {
-            console.log(text);
-            return text;
-          });
-        })
-        .then((text) => {
-          // Parse the text as JSON
-          const data = JSON.parse(text);
-
-          console.log("Success:", data);
-          setShowBookingPopup(true);
-          setIsFormDisabled(true); // Disable the form when the booking popup appears
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    }
+        // Handle the response as needed
+        console.log(response.data);
+        setShowBookingPopup(true);
+        setIsFormDisabled(true);
+      } catch (error) {
+        // Handle errors, show error messages, etc.
+        console.error('Error creating reservation:', error.message);
+      }
+    };
   };
 
   const handleDoneClick = () => {
