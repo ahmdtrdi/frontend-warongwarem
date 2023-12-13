@@ -49,13 +49,8 @@ const HistoryComs = () => {
               alt=""
               src="/rectangle-11.svg"
             />
-            <div className="booking-history-item" />
             <b className="history-and-recent">History and Recent Bookings</b>
-            <div className="booking-history-inner" />
-            <div className="line-div" />
-            <div className="line-div" />
-            <div className="booking-history-child2" />
-            <div className="geo-tumbel-62-856-5624-4133-parent">
+            <div className="geo-tumbel-62-parent">
               <b className="geo-tumbel-62">Geo Tumbel +62 856 5624 4133</b>
               <div className="requested">Requested</div>
               <div className="hours-ago">2 Hours ago</div>
@@ -67,30 +62,102 @@ const HistoryComs = () => {
                 />
                 <b className="people1">01 December 2023 | 01:00 PM</b>
               </div>
-              <div className="mdiperson-multiple-parent">
+              <div className="mdiperson-multiple-parent-1">
                 <img
                   className="material-symbolsdate-range-icon4"
                   alt=""
                   src="/mdipersonmultiple.svg"
                 />
-                <b className="people1">2 People</b>
-                <b className="indoor1">Indoor</b>
+                <b className="people2">2 People</b>
               </div>
             </div>
+            <div className="mdiperson-multiple-parent-2">
+              <img
+                className="material-symbolstable-bar-icon1"
+                alt=""
+                src="/materialsymbolstablebar.svg"
+              />
+              <b className="indoor1">Indoor</b>
+            </div>
+            <div className="rectangle-parent">
+              <img className="group-inner" alt="" src="/rectangle-16.svg" />
+              <button className="rectangle-div">
+                <b className="notes1">Notes</b>
+              </button>
+            </div>
+          </div>
+          <div className="reigendi-62-parent">
+            <b className="reigendi-62">Regin A +62 815 1233 0098</b>
+            <div className="reserved">Reserved</div>
+            <div className="hours-ago-2">2 days ago</div>
+            <div className="material-symbolsdate-range-parent7">
+              <img
+                className="material-symbolsdate-range-icon8"
+                alt=""
+                src="/materialsymbolsdaterange.svg"
+              />
+              <b className="people4">17 December 2023 | 12.15 PM</b>
+            </div>
+            <div className="mdiperson-multiple-parent-9">
+              <img
+                className="material-symbolsdate-range-icon10"
+                alt=""
+                src="/mdipersonmultiple.svg"
+              />
+              <b className="people5">Rent the place</b>
+            </div>
+          </div>
+          <div className="mdiperson-multiple-parent-11">
             <img
-              className="material-symbolstable-bar-icon1"
+              className="material-symbolstable-bar-icon12"
               alt=""
               src="/materialsymbolstablebar.svg"
             />
-            <div className="reserve-button1">
-              <div className="rectangle-parent">
-                <div className="group-child1" />
-                <div className="group-item1" />
-                <img className="group-inner" alt="" src="/rectangle-16.svg" />
-                <div className="rectangle-div" />
-                <b className="notes1">Notes</b>
-              </div>
+            <b className="indoor3">Rent the place</b>
+          </div>
+          <div className="rectangle-parent-12">
+            <img className="group-inner-2" alt="" src="/rectangle-18.svg" />
+            <button className="rectangle-div-1">
+              <b className="notes1">Notes</b>
+            </button>
+          </div>
+          <div className="made-indra-62-parent">
+            <b className="made-indra-62">Made Indra +62 815 2710 9433</b>
+            <div className="pending">Pending</div>
+            <div className="hours-ago-1">1 days ago</div>
+            <div className="material-symbolsdate-range-parent2">
+              <img
+                className="material-symbolsdate-range-icon2"
+                alt=""
+                src="/materialsymbolsdaterange.svg"
+              />
+              <b className="people3">18 December 2023 | 10.00 AM</b>
             </div>
+            <div className="mdiperson-multiple-parent-3">
+              <img
+                className="material-symbolsdate-range-icon5"
+                alt=""
+                src="/mdipersonmultiple.svg"
+              />
+              <b className="people4">3 People</b>
+            </div>
+          </div>
+          <div className="mdiperson-multiple-parent-6">
+            <img
+              className="material-symbolstable-bar-icon2"
+              alt=""
+              src="/materialsymbolstablebar.svg"
+            />
+            <b className="indoor2">Indoor</b>
+          </div>
+          <div className="rectangle-parent-1">
+            <img className="group-inner-1" alt="" src="/rectangle-17.svg" />
+            <button className="rectangle-div-1">
+              <b className="notes1">Notes</b>
+            </button>
+            <button className="rectangle-div-2">
+              <b className="pay">Pay</b>
+            </button>
           </div>
           <div className="image">
             <img className="image-68-icon" alt="" src="/image-68@2x.png" />

@@ -333,6 +333,10 @@ body {
   width: 120%;
   top: 110%;
 }
+.time-x {
+  color: orange;
+  font-weight: bold;
+}
 .we-are-a-team-of-4-with-the-sa-parent {
   position: absolute;
   height: 87.04%;
@@ -869,7 +873,7 @@ body {
 }
 .popup-sign-up-child {
   position: absolute;
-  top: -110px;
+  top: 200px;
   left: 550px;
   border-radius: 5%;
   background-color: var(--color-white);
@@ -884,7 +888,7 @@ body {
 }
 .signed-up-succesfully-container {
   position: absolute;
-  top: -100px;
+  top: 200px;
   left: 660px;
   color: white;
   animation: zoomIn 0.3s;
@@ -909,7 +913,7 @@ body {
 }
 .ok-wrapper {
   position: absolute;
-  top: -15px;
+  top: 280px;
   left: 715px;
   border-radius: 10%;
   background-color: orange;
@@ -1928,6 +1932,302 @@ body {
   position: absolute;
   top: 3px;
   width: 100%;
+}
+.booking-history-child {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  width: 600px;
+  height: 750px;
+  max-height: 1000px;
+}
+.booking-history-item {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 1000px;
+  height: 1000px;
+}
+.history-and-recent {
+  position: absolute;
+  font-size: 30px;
+  top: 125px;
+  left: 115px;
+  color: gray;
+}
+.geo-tumbel-62-parent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 65px;
+  left: 10px;
+}
+.geo-tumbel-62 {
+  position: absolute;
+  top: 125px;
+  left: 280px;
+  width: 240px;
+  color: #000;
+}
+.requested {
+  position: absolute;
+  top: 155px;
+  left: 280px;
+  color: rgb(0, 160, 160);
+}
+.hours-ago {
+  position: absolute;
+  top: 129px;
+  left: 560px;
+  width: 90px;
+  color: gray;
+  font-size: 12px;
+}
+.material-symbolsdate-range-parent1 {
+  position: absolute;
+  top: 190px;
+  left: 278px;
+}
+.material-symbolsdate-range-icon3 {
+  width: 20px;
+  height: 20px;
+}
+.people1 {
+  position: absolute;
+  top: -3px;
+  left: 30px;
+  width: 250px;
+  color: #000;
+}
+.people2 {
+  position: absolute;
+  left: 30px;
+  width: 250px;
+  color: #000;
+}
+.mdiperson-multiple-parent-1 {
+  position: absolute;
+  top: 220px;
+  left: 278px;
+}
+.mdiperson-multiple-parent-2 {
+  position: absolute;
+  top: 320px;
+  left: 288px;
+}
+.indoor1 {
+  position: absolute;
+  left: 30px;
+  width: 250px;
+  color: #000;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 195px;
+  left: 118px;
+}
+.rectangle-div {
+  position: absolute;
+  top: 125px;
+  left: 476px;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 40px; /* tinggi tombol */
+  background-color: orange; /* warna latar belakang tombol */
+  color: white; /* warna teks tombol */
+  text-align: center; /* posisi teks di tengah tombol */
+  border-radius: 8px; /* membuat sudut tombol bulat */
+  font-size: 15px; /* ukuran font teks tombol */
+}
+.made-indra-62-parent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 250px;
+  left: 10px;
+}
+.made-indra-62 {
+  position: absolute;
+  top: 125px;
+  left: 280px;
+  width: 240px;
+  color: #000;
+}
+.pending {
+  position: absolute;
+  top: 155px;
+  left: 280px;
+  color: orange;
+}
+.hours-ago-1 {
+  position: absolute;
+  top: 129px;
+  left: 560px;
+  width: 90px;
+  color: gray;
+  font-size: 12px;
+}
+.material-symbolsdate-range-parent2 {
+  position: absolute;
+  top: 190px;
+  left: 278px;
+}
+.material-symbolsdate-range-icon2 {
+  width: 20px;
+  height: 20px;
+}
+.people3 {
+  position: absolute;
+  top: -3px;
+  left: 30px;
+  width: 250px;
+  color: #000;
+}
+.people4 {
+  position: absolute;
+  left: 30px;
+  width: 250px;
+  color: #000;
+}
+.mdiperson-multiple-parent-3 {
+  position: absolute;
+  top: 220px;
+  left: 278px;
+}
+.material-symbolsdate-range-icon5 {
+  position: absolute;
+  top: 0px;
+  left: -1px;
+}
+.material-symbolstable-bar-icon2 {
+  position: absolute;
+  top: 200px;
+  left: -1px;
+}
+.mdiperson-multiple-parent-6 {
+  position: absolute;
+  top: 305px;
+  left: 288px;
+}
+.indoor2 {
+  position: absolute;
+  top: 198px;
+  left: 31px;
+  width: 250px;
+  color: #000;
+}
+.rectangle-parent-1 {
+  position: absolute;
+  top: 380px;
+  left: 118px;
+}
+.rectangle-div-1 {
+  position: absolute;
+  top: 125px;
+  left: 476px;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 40px; /* tinggi tombol */
+  background-color: orange; /* warna latar belakang tombol */
+  color: white; /* warna teks tombol */
+  text-align: center; /* posisi teks di tengah tombol */
+  border-radius: 8px; /* membuat sudut tombol bulat */
+  font-size: 15px; /* ukuran font teks tombol */
+}
+.rectangle-div-2 {
+  position: absolute;
+  top: 125px;
+  left: 370px;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 40px; /* tinggi tombol */
+  background-color: orange; /* warna latar belakang tombol */
+  color: white; /* warna teks tombol */
+  text-align: center; /* posisi teks di tengah tombol */
+  border-radius: 8px; /* membuat sudut tombol bulat */
+  font-size: 15px; /* ukuran font teks tombol */
+}
+.reigendi-62-parent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 445px;
+  left: 10px;
+}
+.reigendi-62 {
+  position: absolute;
+  top: 125px;
+  left: 280px;
+  width: 240px;
+  color: #000;
+}
+.reserved {
+  position: absolute;
+  top: 155px;
+  left: 280px;
+  color: rgb(10, 192, 98);
+}
+.hours-ago-2 {
+  position: absolute;
+  top: 129px;
+  left: 560px;
+  width: 90px;
+  color: gray;
+  font-size: 12px;
+}
+.material-symbolsdate-range-parent7 {
+  position: absolute;
+  top: 190px;
+  left: 278px;
+}
+.material-symbolsdate-range-icon8 {
+  width: 20px;
+  height: 20px;
+}
+.people4 {
+  position: absolute;
+  top: -3px;
+  left: 30px;
+  width: 250px;
+  color: #000;
+}
+.people5 {
+  position: absolute;
+  left: 31px;
+  width: 250px;
+  color: #000;
+}
+.mdiperson-multiple-parent-9 {
+  position: absolute;
+  top: 220px;
+  left: 278px;
+}
+.material-symbolsdate-range-icon10 {
+  position: absolute;
+  top: 0px;
+  left: -1px;
+}
+.material-symbolstable-bar-icon12 {
+  position: absolute;
+  top: 200px;
+  left: -1px;
+}
+.mdiperson-multiple-parent-11 {
+  position: absolute;
+  top: 500px;
+  left: 288px;
+}
+.indoor3 {
+  position: absolute;
+  top: 198px;
+  left: 31px;
+  width: 250px;
+  color: #000;
+}
+.rectangle-parent-12 {
+  position: absolute;
+  top: 575px;
+  left: 118px;
 }
 
 /* WAITER GEO PNYA */
