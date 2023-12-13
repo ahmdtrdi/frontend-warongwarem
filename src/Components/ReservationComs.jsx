@@ -4,9 +4,15 @@ import LogoutPopupCustomer from "./PopLogoutComs";
 import BookingPopUpCustomerPage from "./PopBookingComs";
 import axios from 'axios';
 
+const userId = localStorage.getItem('userId'); // Get user_id from local storage
+
 const instance = axios.create({
   baseURL: 'http://localhost:8000/api',
-  timeout: 5000,
+  timeout: 1000,
+  headers: {
+    'X-Custom-Header': 'foobar',
+    'User-Id': userId // Add this line
+  }
 });
 
 const ReservationComs = () => {
@@ -66,19 +72,18 @@ const ReservationComs = () => {
       window.alert("Please fill all the fields");
     } else {
       console.log("Reserve button clicked");
-
+  
       try {
-        let accessToken = localStorage.getItem('jwtToken');
-        console.log(accessToken);
-        if (!accessToken) {
-          // Show an error message
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
           console.error("User is not authenticated");
-          return;  // Important to prevent the rest of the function from executing
+          return;
         }
-
-        const response = await instance.post(
+        
+        const response = await axios.post(
           'http://localhost:8000/api/reservations',
           {
+            user_id: userId, // Add this line
             name: fullName,
             phone_number: phoneNumber,
             date,
@@ -86,14 +91,9 @@ const ReservationComs = () => {
             people: isRentChecked ? 0 : parseInt(people),
             tableType: isRentChecked ? "Rent the place" : tableType,
             notes
-          },
-          {
-            headers: {
-              'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,
-            },
           }
         );
-
+  
         // Handle the response as needed
         console.log(response.data);
         setShowBookingPopup(true);

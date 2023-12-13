@@ -41,7 +41,7 @@ const LoginComs = () => {
         const data = await response.json();
 
         // Save the token to local storage
-        localStorage.setItem('jwtToken', data.token);
+        localStorage.setItem('userId', data.user_id);
 
         navigate("/reservation");
       } catch (error) {
