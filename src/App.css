@@ -6,6 +6,28 @@
     opacity: 1;
   }
 }
+body {
+  background-color: #000;
+}
+.landing-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.landing-page .div {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 1440px;
+}
+.landing-page .overlap {
+  height: 90%;
+  left: 10px;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
 .home {
   position: relative;
   line-height: 24px;
@@ -19,10 +41,10 @@
 }
 .home-parent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 55px;
 }
 .project-status-icon {
   position: relative;
@@ -32,7 +54,7 @@
 .navber {
   position: relative;
   width: 100%;
-  top: -230px;
+  top: 100px;
   right: 53.44%;
   left: 130px;
   display: flex;
@@ -203,7 +225,25 @@
 }
 
 /* About Us */
-
+.about-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.about-us .div {
+  height: 820px;
+  overflow: hidden;
+  position: relative;
+  width: 1520px;
+}
+.about-us .overlap {
+  height: 85%;
+  left: 10px;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
 .we-are-a {
   position: absolute;
   height: 23.4%;
@@ -343,7 +383,25 @@
 }
 
 /* Login Page */
-
+.login-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.login-page .div {
+  height: 760px;
+  overflow: hidden;
+  position: relative;
+  width: 1520px;
+}
+.login-page .overlap {
+  height: 90%;
+  left: 10px;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
 .waiter-button-child {
   position: absolute;
   height: 100%;
@@ -814,8 +872,9 @@
   top: -110px;
   left: 550px;
   border-radius: 5%;
-  background-color: white;
+  background-color: var(--color-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(25px);
   width: 408px;
   height: 160px;
   animation: zoomIn 0.3s;
@@ -827,7 +886,7 @@
   position: absolute;
   top: -100px;
   left: 660px;
-  color: black;
+  color: white;
   animation: zoomIn 0.3s;
 }
 .popup-sign-up-inner,
@@ -875,6 +934,25 @@
 }
 
 /* Reservation Page */
+.reservation-customer-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.reservation-customer-page .div {
+  height: 760px;
+  overflow: hidden;
+  position: relative;
+  width: 1520px;
+}
+.reservation-customer-page .overlap {
+  height: 90%;
+  left: 10px;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
 .unsplashlp5mcm6nz5a-icon {
   position: absolute;
   height: 49.72%;
@@ -1063,8 +1141,9 @@
   gap: 5px;
 }
 .table-type-parent {
-  top: 34.9%;
-  right: 1.5%;
+  width: 35%;
+  top: 0%;
+  right: -37%;
   position: absolute;
   border-radius: 8px; /* ganti dengan nilai yang sesuai */
   border: 2px solid gainsboro; /* ganti dengan warna yang sesuai */
@@ -1273,8 +1352,9 @@
   top: 10px;
   left: 550px;
   border-radius: 5%;
-  background-color: white;
+  background-color: var(--color-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(25px);
   width: 408px;
   height: 160px;
   animation: zoomIn 0.3s;
@@ -1286,7 +1366,7 @@
   top: 20%;
   left: 605px;
   font-size: 18px;
-  color: black;
+  color: white;
   animation: zoomIn 0.3s;
   animation-fill-mode: forwards;
 }
@@ -1340,6 +1420,7 @@
 }
 .logout-popup-customer {
   position: relative;
+  top: 30%;
   width: 100%;
   height: 168px;
   text-align: center;
@@ -1360,6 +1441,25 @@
 }
 
 /* Costumer Service */
+.customer-service-customer-pa {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.customer-service-customer-pa .div {
+  height: 760px;
+  overflow: hidden;
+  position: relative;
+  width: 1520px;
+}
+.customer-service-customer-pa .overlap {
+  height: 90%;
+  left: 10px;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
 .contact-us {
   position: absolute;
   top: 180px;
@@ -1368,28 +1468,19 @@
   color: orange;
   font-size: 25px;
 }
-.submit {
-  position: relative;
-  line-height: 24px;
-}
-.submit-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
 .submit-button-child {
   position: absolute;
+  height: 7%;
   width: 20%;
-  background-color: orange; /* Warna latar belakang */
-  color: white;
-  top: 53%;
-  left: 61.5%;
-  text-align: center; /* Penjajaran teks */
+  top: 52%;
+  left: 61.6%;
+  line-height: 24px;
+  font-family: var(--font-helvetica);
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: orange;
   display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 12px; /* Border */
+  z-index: 1;
 }
 .full-name1 {
   position: absolute;
@@ -1500,104 +1591,275 @@
   object-fit: cover;
 }
 
-/* Booking Pop Up */
-.booking-popup-customer-page-child {
+/* Costumer Service Pop Up */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.popup-customer-service-child {
   position: absolute;
-  top: 50px; /* Geser popup 50px ke bawah */
-  left: 560px; /* Geser popup 50px ke kanan */
+  top: 250px;
+  left: 550px;
   border-radius: var(--br-8xs);
   background-color: var(--color-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(25px);
-  width: 400px; /* Lebarkan popup menjadi 600px */
-  height: 400px; /* Tinggikan popup menjadi 600px */
+  width: 400px;
+  height: 160px;
+  z-index: 2;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
 }
+.your-feedback-has {
+  margin: 0;
+}
+.your-feedback-has-container {
+  position: absolute;
+  top: 270px;
+  left: 627px;
+  z-index: 2;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
+}
+.popup-customer-service-inner,
+.popup-customer-service-item {
+  position: absolute;
+  top: 18.75px;
+  left: 32.75px;
+  border-top: 0.5px solid var(--primary);
+  box-sizing: border-box;
+  width: 458.5px;
+  height: 0.5px;
+}
+.popup-customer-service-inner {
+  top: 93.75px;
+}
+.done1 {
+  position: relative;
+  line-height: 24px;
+}
+.done-wrapper1 {
+  position: absolute;
+  top: 350px;
+  left: 703px;
+  border-radius: 10px;
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 29px;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-white);
+  z-index: 2;
+  animation: zoomIn 0.3s;
+  animation-fill-mode: forwards;
+}
+.popup-customer-service {
+  position: relative;
+  width: 100%;
+  height: 168px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--secondary);
+  font-family: var(--font-segoe-ui);
+}
+
+/* Booking Pop Up */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+/* Menggunakan Animasi */
+.booking-popup-customer-page {
+  animation: zoomIn 0.5s forwards;
+}
+
+.booking-popup-customer-page.closing {
+  animation: zoomOut 0.5s forwards;
+}
+/* Untuk mengedit desain elemen dengan class "booking-popup-customer-page" */
+.booking-popup-customer-page {
+  position: relative;
+  width: 100%;
+  height: 498px;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--secondary);
+  font-family: var(--font-segoe-ui);
+}
+
+/* Untuk mengedit desain elemen dengan class "booking-popup-customer-page-child" */
+.booking-popup-customer-page-child {
+  position: absolute;
+  top: 120px;
+  left: 560px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  width: 400px;
+  height: 400px;
+}
+
+/* Untuk mengedit desain elemen dengan class "material-symbolstable-bar-icon" */
 .material-symbolstable-bar-icon {
   position: absolute;
-  top: 290px;
-  left: 49px;
   width: 20px;
   height: 20px;
+  left: 600px;
+  top: 375px;
 }
+
+/* Untuk mengedit desain elemen dengan class "material-symbolsdate-range-icon-1" dan "material-symbolsdate-range-icon-2" */
+.material-symbolsdate-range-icon-1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 90px;
+  left: 205%;
+}
+.material-symbolsdate-range-icon-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 90px;
+  left: 475%;
+}
+/* Untuk mengedit desain elemen dengan class "indoor" */
 .indoor {
   position: absolute;
-  top: 288px;
-  left: 80px;
+  top: 372.5px;
+  left: 627px;
 }
+
+/* Untuk mengedit desain elemen dengan class "notes-tidak-pake" */
 .notes-tidak-pake {
   position: absolute;
-  top: 342px;
-  left: 49px;
+  top: 410px;
+  left: 602px;
   display: inline-block;
   width: 422px;
   height: 73px;
 }
+
+/* Untuk mengedit desain elemen dengan class "frame-icon" */
 .frame-icon {
   position: absolute;
-  top: 30px;
-  left: 221px;
+  top: 150px;
+  left: 721px;
   width: 80px;
   height: 80px;
 }
+
+/* Untuk mengedit desain elemen dengan class "sent" */
 .sent {
-  color: var(--primary);
+  color: orange;
 }
+
+/* Untuk mengedit desain elemen dengan class "table-booking-request-container" */
 .table-booking-request-container {
   position: absolute;
-  top: 121px;
-  left: 129px;
+  top: 250px;
+  left: 625px;
   font-size: 20px;
   line-height: 24px;
+  white-space: nowrap;
 }
-.b,
-.names {
-  position: absolute;
-  top: 178px;
-  left: 129px;
+
+/* Untuk mengedit desain elemen dengan class "container-1" */
+.container-1 {
+  position: relative;
+  top: 280px;
+  left: 000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+/* Untuk mengedit desain elemen dengan class "names" dan "b" */
+.names,
 .b {
-  left: 239px;
+  margin-right: 10px;
 }
-.material-symbolsdate-range-icon {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-}
-.december-2023 {
-  position: absolute;
-  top: 0;
-  left: 31px;
-}
+
+/* Untuk mengedit desain elemen dengan class "material-symbolsdate-range-parent" */
 .material-symbolsdate-range-parent {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 269px;
   height: 24px;
-}
-.people {
-  position: absolute;
   top: 0;
-  left: 28px;
+  left: 0;
 }
-.group-parent-1,
+
+/* Untuk mengedit desain elemen dengan class "december-2023" */
+.december-2023 {
+  position: absolute;
+  top: 87.5px;
+  left: 215%;
+  width: 133px;
+}
+
+/* Untuk mengedit desain elemen dengan class "mdiperson-multiple-parent" */
 .mdiperson-multiple-parent {
   position: absolute;
   top: 0;
   left: 312px;
   width: 97px;
-  height: 24px;
 }
+
+/* Untuk mengedit desain elemen dengan class "people" */
+.people {
+  position: absolute;
+  top: 87.5px;
+  left: 490px;
+  width: 61px;
+}
+
+/* Untuk mengedit desain elemen dengan class "group-parent-1" */
 .group-parent-1 {
+  position: absolute;
   top: 239px;
   left: 49px;
   width: 409px;
 }
-.booking-popup-customer-page-child1,
-.booking-popup-customer-page-inner,
+
+/* Untuk mengedit desain elemen dengan class "booking-popup-customer-page-item", "booking-popup-customer-page-inner", "booking-popup-customer-page-child1", dan "line-div" */
 .booking-popup-customer-page-item,
+.booking-popup-customer-page-inner,
+.booking-popup-customer-page-child1,
 .line-div {
   position: absolute;
   top: 157.75px;
@@ -1607,29 +1869,36 @@
   width: 458.5px;
   height: 0.5px;
 }
-.booking-popup-customer-page-child1,
+
 .booking-popup-customer-page-inner,
+.booking-popup-customer-page-child1,
 .line-div {
   top: 216.75px;
 }
+
 .booking-popup-customer-page-child1,
 .line-div {
   top: 331.75px;
 }
+
 .booking-popup-customer-page-child1 {
   top: 422.75px;
   left: 30.75px;
 }
+
+/* Untuk mengedit desain elemen dengan class "done" */
 .done {
   position: relative;
   line-height: 24px;
 }
+
+/* Untuk mengedit desain elemen dengan class "done-wrapper" */
 .done-wrapper {
   position: absolute;
-  top: 437px;
-  left: 211px;
-  border-radius: var(--br-8xs);
-  background-color: var(--primary);
+  top: 452px;
+  left: 712px;
+  border-radius: 8px;
+  background-color: orange;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1639,12 +1908,915 @@
   font-size: 16px;
   color: var(--color-white);
 }
-.booking-popup-customer-page {
-  position: relative;
+
+/* History */
+.reservation-history-customer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
-  height: 498px;
-  text-align: left;
-  font-size: var(--font-size-lg);
+}
+.reservation-history-customer .div {
+  height: 760px;
+  overflow: hidden;
+  position: relative;
+  width: 1520px;
+}
+.reservation-history-customer .overlap {
+  height: 90%;
+  left: 10px;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
+
+/* WAITER GEO PNYA */
+.waiter-window {
+  background-color: #f6f6f6;
+  height: 946px;
+  position: relative;
+  width: 1250px;
+}
+
+.waiter-window .overlap {
+  border-radius: 10px;
+  height: 48px;
+  left: 16px;
+  position: absolute;
+  top: 107px;
+  width: 50px;
+}
+
+.waiter-window .rectangle {
+  background-color: #5e5e5e;
+  border-radius: 10px;
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 48px;
+}
+
+.waiter-window .icon-park-table {
+  height: 30px !important;
+  left: 9px !important;
+  position: absolute !important;
+  top: 9px !important;
+  width: 30px !important;
+}
+
+.waiter-window .power-off {
+  height: 30px;
+  left: 25px;
+  object-fit: cover;
+  position: absolute;
+  top: 245px;
+  width: 30px;
+}
+
+.waiter-window .line {
+  height: 1px;
+  left: 17px;
+  object-fit: cover;
+  position: absolute;
+  top: 225px;
+  width: 44px;
+}
+
+.waiter-window .ic-sharp-table {
+  height: 30px;
+  left: 24px;
+  position: absolute;
+  top: 175px;
+  width: 30px;
+}
+
+.waiter-window .overlap-group {
+  height: 339px;
+  left: 117px;
+  position: absolute;
+  top: 160px;
+  width: 1077px;
+}
+
+.waiter-window .stable-table-row {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  gap: 20px;
+  height: 40px;
+  left: 1px;
+  padding: 0px 20px;
+  position: absolute;
+  top: 0;
+  width: 1076px;
+}
+
+.waiter-window .checkbox {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(
+      to bottom,
+      rgb(199.89, 199.89, 199.89),
+      rgb(150.96, 150.96, 150.96)
+    )
+    1;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 2px #00000033;
+  height: 14px;
+  position: relative;
+  width: 14px;
+}
+
+.waiter-window .stable-table-grid {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.waiter-window .stable-table-cell {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 135px;
+}
+
+.waiter-window .text-wrapper {
+  align-self: stretch;
+  color: #0f1419;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  position: relative;
+}
+
+.waiter-window .div-wrapper {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 128px;
+}
+
+.waiter-window .div {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 100px;
+}
+
+.waiter-window .stable-table-cell-2 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  position: relative;
+}
+
+.waiter-window .stable-table-row-2 {
+  align-items: center;
+  background-color: #fff9f1;
+  border: 1px solid;
+  border-color: #ffe2c0;
+  display: flex;
+  gap: 20px;
+  height: 62px;
+  left: 0;
+  padding: 0px 20px;
+  position: absolute;
+  top: 39px;
+  width: 1076px;
+}
+
+.waiter-window .checkbox-2 {
+  background-color: #f49b32;
+  border: 1px solid;
+  border-color: transparent;
+  border-image: linear-gradient(
+      to bottom,
+      rgb(199.89, 199.89, 199.89),
+      rgb(150.96, 150.96, 150.96)
+    )
+    1;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 2px #00000033;
+  height: 14px;
+  position: relative;
+  width: 14px;
+}
+
+.waiter-window .text-wrapper-2 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+.waiter-window .stable-table-cell-3 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 130px;
+}
+
+.waiter-window .stable-table-cell-4 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 101px;
+}
+
+.waiter-window .text-wrapper-3 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #333333;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-right: -71px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 172px;
+}
+
+.waiter-window .stable-table-cell-5 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 146px;
+}
+
+.waiter-window .stable-table-cell-6 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 141px;
+}
+
+.waiter-window .text-wrapper-4 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #ffdd67;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 76px;
+}
+
+.waiter-window .group {
+  height: 40px;
+  margin-right: -17.27px;
+  position: relative;
+  width: 72.27px;
+}
+
+.waiter-window .overlap-group-2 {
+  background-color: var(--primary);
+  border-radius: 4px;
+  height: 40px;
+  position: relative;
+  width: 70px;
+  left: 50px;
+}
+
+.waiter-window .text-wrapper-5 {
+  color: var(--white);
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 70px;
+}
+
+.waiter-window .stable-table-row-3 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ffe2c0;
+  display: flex;
+  gap: 20px;
+  height: 62px;
+  left: 0;
+  padding: 0px 20px;
+  position: absolute;
+  top: 159px;
+  width: 1076px;
+}
+
+.waiter-window .checkbox-3 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: var(--secondary);
+  border-radius: 3px;
+  height: 14px;
+  position: relative;
+  width: 14px;
+}
+
+.waiter-window .stable-table-cell-7 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 131px;
+}
+
+.waiter-window .text-wrapper-6 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
   color: var(--secondary);
-  font-family: var(--font-segoe-ui);
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+.waiter-window .element-wrapper {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 134px;
+}
+
+.waiter-window .stable-table-cell-8 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 102px;
+}
+
+.waiter-window .stable-table-cell-9 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 145px;
+}
+
+.waiter-window .stable-table-cell-10 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 149px;
+}
+
+.waiter-window .stable-table-cell-11 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 138px;
+}
+
+.waiter-window .text-wrapper-7 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #6cc824;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 76px;
+}
+
+.waiter-window .stable-table-row-4 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ffe2c0;
+  display: flex;
+  gap: 20px;
+  height: 62px;
+  left: 0;
+  padding: 0px 20px;
+  position: absolute;
+  top: 99px;
+  width: 1076px;
+}
+
+.waiter-window .text-wrapper-8 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #24bec8;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 76px;
+}
+
+.waiter-window .stable-table-row-5 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ffe2c0;
+  display: flex;
+  gap: 20px;
+  height: 62px;
+  left: 0;
+  padding: 0px 20px;
+  position: absolute;
+  top: 219px;
+  width: 1076px;
+}
+
+.waiter-window .text-wrapper-9 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #f22104;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 76px;
+}
+
+.waiter-window .stable-table-row-6 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ffe2c0;
+  display: flex;
+  gap: 20px;
+  height: 62px;
+  left: 0;
+  padding: 0px 20px;
+  position: absolute;
+  top: 277px;
+  width: 1076px;
+}
+
+.waiter-window .checkbox-4 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #c4c4c4;
+  border-radius: 3px;
+  height: 14px;
+  position: relative;
+  width: 14px;
+}
+
+.waiter-window .text-wrapper-10 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  color: #0f1419;
+  display: -webkit-box;
+  font-family: "Segoe UI-Semibold", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 76px;
+}
+
+.waiter-window .overlap-wrapper {
+  height: 40px;
+  left: 1039px;
+  position: absolute;
+  top: 885px;
+  width: 128px;
+}
+
+.waiter-window .overlap-2 {
+  background-color: #f22104;
+  border-radius: 4px;
+  height: 40px;
+  position: fixed;
+  width: 126px;
+  top: 638px;
+}
+
+.waiter-window .text-wrapper-11 {
+  color: #ffffff;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 126px;
+}
+
+.waiter-window .overlap-group-wrapper {
+  height: 40px;
+  left: 861px;
+  position: absolute;
+  top: 885px;
+  width: 152px;
+}
+
+.waiter-window .assign-reserve-wrapper {
+  background-color: #6cc824;
+  border-radius: 4px;
+  height: 40px;
+  position: fixed;
+  width: 150px;
+  top: 638px;
+}
+
+.waiter-window .assign-reserve {
+  color: var(--white);
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 150px;
+}
+
+.waiter-window .img {
+  height: 1px;
+  left: 101px;
+  object-fit: cover;
+  position: absolute;
+  top: 872px;
+  width: 1064px;
+}
+
+.waiter-window .text-wrapper-12 {
+  color: #000000;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  left: 120px;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: fixed;
+  text-align: center;
+  top: 650px;
+  white-space: nowrap;
+}
+
+.waiter-window .group-2 {
+  height: 46px;
+  left: 763px;
+  position: absolute;
+  top: 58px;
+  width: 269px;
+}
+
+.waiter-window .overlap-3 {
+  height: 46px;
+  position: fixed;
+  width: 267px;
+}
+
+.waiter-window .overlap-4 {
+  height: 46px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 267px;
+}
+
+.waiter-window .rectangle-2 {
+  background-color: #ffffff;
+  border: 2px dashed;
+  border-color: #dfdfdf;
+  border-radius: 5px;
+  height: 203px;
+  left: 1120px;
+  position: fixed;
+  top: -20px;
+  transform: rotate(90deg);
+  width: 35px;
+}
+
+.waiter-window .ri-search-line-instance {
+  height: 20px !important;
+  left: 232px !important;
+  position: fixed !important;
+  top: 12px !important;
+  width: 20px !important;
+}
+
+.waiter-window .text-wrapper-13 {
+  color: #000000;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 30px;
+  left: 925px;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: fixed;
+  top: 65px;
+  white-space: nowrap;
+  background-color: #dfdfdf;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.waiter-window .rectangle-3 {
+  background-color: #5e5e5e;
+  height: 40px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 1250px;
+}
+
+.waiter-window .warong-warem {
+  color: transparent;
+  font-family: "Kanit-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: fixed;
+  top: -28px;
+  white-space: nowrap;
+}
+
+.waiter-window .span {
+  color: #ff9f0d;
+}
+
+.waiter-window .text-wrapper-14 {
+  color: #ffffff;
+}
+
+.waiter-window .group-3 {
+  height: 40px;
+  left: 1270px;
+  position: fixed;
+  top: 62px;
+  width: 128px;
+}
+
+.waiter-window .overlap-5 {
+  background-color: #f49b32;
+  border-radius: 4px;
+  height: 40px;
+  position: relative;
+  width: 80px;
+  left: -150px;
+}
+
+.waiter-window .text-wrapper-15 {
+  color: #000000;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  height: 20px;
+  left: 116px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: fixed;
+  text-align: center;
+  top: 71px;
+  white-space: nowrap;
+}
+
+.waiter-window .frame {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #dfdfdf;
+  border-radius: 5px;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  left: 251px;
+  padding: 10px 16px;
+  position: fixed;
+  top: 59px;
+}
+
+.waiter-window .icon-instance-node {
+  height: 25px !important;
+  position: relative !important;
+  width: 25px !important;
+}
+
+.waiter-window .text-wrapper-16 {
+  color: #000000;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.5px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.waiter-window .mdi-chevron-down {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.waiter-window .frame-2 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #dfdfdf;
+  border-radius: 5px;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  left: 470px;
+  padding: 10px 16px;
+  position: fixed;
+  top: 59px;
+}
+
+.waiter-window .frame-3 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #dfdfdf;
+  border-radius: 5px;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  left: 650px;
+  padding: 10px 16px;
+  position: fixed;
+  top: 60px;
+}
+
+.waiter-window .text-wrapper-17 {
+  color: #000000;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.waiter-window .text-wrapper-18 {
+  color: #ffffff;
+  font-family: "Kanit-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  left: 1140px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: fixed;
+  top: 3px;
+  white-space: nowrap;
+}
+
+.waiter-window .dateinputwaiter {
+  background-color: #ffffff;
+}
+
+.waiter-window .logoutwaiter-btn {
+  background-color: #ffffff;
+  top: 280px;
+  position: fixed;
+  left: 15px;
+  width: 68px;
+  height: 50px;
+}
+
+.waiter-window .Logoutwaiter {
+  width: 30px;
+  height: 30px;
+  left: 18px;
+  position: absolute;
+  top: 10px;
+}
+
+.waiter-window .tablewaiter-btn {
+  background-color: #ffffff;
+  top: 200px;
+  position: fixed;
+  left: 15px;
+}
+
+.waiter-window .mainwaiter-btn {
+  background-color: #5e5e5e;
+  top: 130px;
+  position: fixed;
+  left: 15px;
+}
+
+.waiter-window .tablewaiter-btn2 {
+  background-color: #5e5e5e;
+  top: 200px;
+  position: fixed;
+  left: 15px;
+}
+
+.waiter-window .mainwaiter-btn2 {
+  background-color: #ffffff;
+  top: 130px;
+  position: fixed;
+  left: 15px;
 }
