@@ -1070,6 +1070,7 @@ body {
   gap: 100%;
   right: 17%;
   top: -11%;
+  z-index: 1;
 }
 .reserve2-parent button {
   margin: 15px;
@@ -3132,4 +3133,322 @@ body {
   top: 130px;
   position: fixed;
   left: 15px;
+}
+
+/* Notes Popup History*/
+.notes-popup-customer-child {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(25px);
+  width: 502px;
+  height: 400px;
+}
+.material-symbolstable-bar-icon {
+  position: absolute;
+  top: 144px;
+  left: 46px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.indoor5 {
+  position: absolute;
+  top: 142px;
+  left: 79px;
+}
+.notes-tidak-pake-1 {
+  position: absolute;
+  top: 196px;
+  left: 48px;
+  display: inline-block;
+  width: 422px;
+  height: 73px;
+}
+.b-1,
+.made-indra-1 {
+  position: absolute;
+  top: 32px;
+  left: 128px;
+}
+.b-1 {
+  left: 238px;
+}
+.material-symbolsdate-range-icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.december-2023-1 {
+  position: absolute;
+  top: 0;
+  left: 31px;
+  width: 220px;
+}
+.material-symbolsdate-range-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 269px;
+  height: 24px;
+}
+.people6 {
+  position: absolute;
+  top: 0;
+  left: 28px;
+}
+.group-parent-2,
+.mdiperson-multiple-parent {
+  position: absolute;
+  top: 0;
+  left: 312px;
+  width: 97px;
+  height: 24px;
+}
+.group-parent-2 {
+  top: 93px;
+  left: 48px;
+  width: 409px;
+}
+.line-div-1,
+.notes-popup-customer-child1,
+.notes-popup-customer-inner,
+.notes-popup-customer-item {
+  position: absolute;
+  top: 18.75px;
+  left: 32.75px;
+  border-top: 0.5px solid var(--primary);
+  box-sizing: border-box;
+  width: 458.5px;
+  height: 0.5px;
+}
+.line-div-1,
+.notes-popup-customer-child1,
+.notes-popup-customer-inner {
+  top: 70.75px;
+  left: 30.75px;
+}
+.line-div-1,
+.notes-popup-customer-child1 {
+  top: 185.75px;
+}
+.notes-popup-customer-child1 {
+  top: 421.75px;
+  left: 29.75px;
+}
+.back {
+  position: relative;
+  line-height: 24px;
+}
+.back-wrapper {
+  position: absolute;
+  top: 300px;
+  left: 215px;
+  border-radius: 8px;
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 29px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-white);
+}
+.notes-popup-customer {
+  position: relative;
+  top: 125px;
+  left: 550px;
+  width: 100%;
+  height: 498px;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--secondary);
+  font-family: var(--font-segoe-ui);
+}
+
+/* Payment Popup History */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.zoomIn {
+  animation: zoomIn 0.5s forwards;
+}
+.zoomOut {
+  animation: zoomOut 0.5s forwards;
+}
+.payment-popup-customer-child {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(25px);
+  width: 502px;
+  height: 400px;
+}
+.material-symbolstable-bar-icon {
+  position: absolute;
+  top: 144px;
+  left: 46px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.indoor6 {
+  position: absolute;
+  top: 142px;
+  left: 79px;
+}
+.notes-tidak-pake-2 {
+  position: absolute;
+  top: 196px;
+  left: 48px;
+  display: inline-block;
+  width: 422px;
+  height: 73px;
+}
+.b-2,
+.made-indra-2 {
+  position: absolute;
+  top: 32px;
+  left: 128px;
+}
+.b-2 {
+  left: 238px;
+}
+.material-symbolsdate-range-icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.december-2023-2 {
+  position: absolute;
+  top: 0;
+  left: 31px;
+  width: 220px;
+}
+.material-symbolsdate-range-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 269px;
+  height: 24px;
+}
+.people7 {
+  position: absolute;
+  top: 0;
+  left: 28px;
+}
+.group-parent-3,
+.mdiperson-multiple-parent {
+  position: absolute;
+  top: 0;
+  left: 312px;
+  width: 97px;
+  height: 24px;
+}
+.group-parent-3 {
+  top: 93px;
+  left: 48px;
+  width: 409px;
+}
+.line-div-2,
+.payment-popup-customer-child1,
+.payment-popup-customer-inner,
+.payment-popup-customer-item {
+  position: absolute;
+  top: 18.75px;
+  left: 32.75px;
+  border-top: 0.5px solid var(--primary);
+  box-sizing: border-box;
+  width: 458.5px;
+  height: 0.5px;
+}
+.line-div-2,
+.payment-popup-customer-child1,
+.payment-popup-customer-inner {
+  top: 70.75px;
+  left: 30.75px;
+}
+.line-div-2,
+.payment-popup-customer-child1 {
+  top: 185.75px;
+}
+.payment-popup-customer-child1 {
+  top: 388.75px;
+  left: 32.75px;
+}
+.pay {
+  position: relative;
+  line-height: 24px;
+}
+.pay-wrapper {
+  position: absolute;
+  top: 320px;
+  left: 220px;
+  border-radius: 8px;
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 29px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-white);
+}
+.reservation-cost {
+  position: relative;
+}
+.reservation-cost-rp200000-wrapper {
+  position: absolute;
+  height: 30px;
+  width: 260px;
+  top: 260px;
+  left: 130px;
+  border-radius: 10px;
+  background-color: #6cc824;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-10xl);
+  text-align: center;
+}
+.payment-popup-customer {
+  position: relative;
+  top: 125px;
+  left: 520px;
+  width: 100%;
+  height: 498px;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--secondary);
+  font-family: var(--font-segoe-ui);
 }

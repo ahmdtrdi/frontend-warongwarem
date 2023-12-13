@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import LogoutPopupCustomer from "./PopLogoutComs";
+import NotesPopupCustomer from "./PopNotesComs";
+import PaymentPopupCustomer from "./PopPaymentComs";
 
 const HistoryComs = () => {
   const navigate = useNavigate();
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
+  const [showNotesPopup, setShowNotesPopup] = useState(false);
+  const [showPaymentPopup, setShowPaymentPopup] = useState(false);
 
   const handleLogoutClick = () => {
     setShowLogoutPopup(true);
@@ -12,6 +16,26 @@ const HistoryComs = () => {
 
   const handleCancelLogout = () => {
     setShowLogoutPopup(false);
+  };
+
+  const handleNotesClick = () => {
+    // Add this function
+    setShowNotesPopup(true);
+  };
+
+  const handleNotesPopupClose = () => {
+    // Add this function
+    setShowNotesPopup(false);
+  };
+
+  const handlePayClick = () => {
+    // Add this function
+    setShowPaymentPopup(true);
+  };
+
+  const handlePaymentPopupClose = () => {
+    // Add this function
+    setShowPaymentPopup(false);
   };
 
   return (
@@ -86,6 +110,44 @@ const HistoryComs = () => {
               </button>
             </div>
           </div>
+          <div className="made-indra-62-parent">
+            <b className="made-indra-62">Made Indra +62 815 2710 9433</b>
+            <div className="pending">Pending</div>
+            <div className="hours-ago-1">1 days ago</div>
+            <div className="material-symbolsdate-range-parent2">
+              <img
+                className="material-symbolsdate-range-icon2"
+                alt=""
+                src="/materialsymbolsdaterange.svg"
+              />
+              <b className="people3">18 December 2023 | 10.00 AM</b>
+            </div>
+            <div className="mdiperson-multiple-parent-3">
+              <img
+                className="material-symbolsdate-range-icon5"
+                alt=""
+                src="/mdipersonmultiple.svg"
+              />
+              <b className="people4">3 People</b>
+            </div>
+          </div>
+          <div className="mdiperson-multiple-parent-6">
+            <img
+              className="material-symbolstable-bar-icon2"
+              alt=""
+              src="/materialsymbolstablebar.svg"
+            />
+            <b className="indoor2">Indoor</b>
+          </div>
+          <div className="rectangle-parent-1">
+            <img className="group-inner-1" alt="" src="/rectangle-17.svg" />
+            <button className="rectangle-div-2" onClick={handleNotesClick}>
+              <b className="notes1">Notes</b>
+            </button>
+            <button className="rectangle-div-3" onClick={handlePayClick}>
+              <b className="pay">Pay</b>
+            </button>
+          </div>
           <div className="reigendi-62-parent">
             <b className="reigendi-62">Regin A +62 815 1233 0098</b>
             <div className="reserved">Reserved</div>
@@ -121,44 +183,6 @@ const HistoryComs = () => {
               <b className="notes1">Notes</b>
             </button>
           </div>
-          <div className="made-indra-62-parent">
-            <b className="made-indra-62">Made Indra +62 815 2710 9433</b>
-            <div className="pending">Pending</div>
-            <div className="hours-ago-1">1 days ago</div>
-            <div className="material-symbolsdate-range-parent2">
-              <img
-                className="material-symbolsdate-range-icon2"
-                alt=""
-                src="/materialsymbolsdaterange.svg"
-              />
-              <b className="people3">18 December 2023 | 10.00 AM</b>
-            </div>
-            <div className="mdiperson-multiple-parent-3">
-              <img
-                className="material-symbolsdate-range-icon5"
-                alt=""
-                src="/mdipersonmultiple.svg"
-              />
-              <b className="people4">3 People</b>
-            </div>
-          </div>
-          <div className="mdiperson-multiple-parent-6">
-            <img
-              className="material-symbolstable-bar-icon2"
-              alt=""
-              src="/materialsymbolstablebar.svg"
-            />
-            <b className="indoor2">Indoor</b>
-          </div>
-          <div className="rectangle-parent-1">
-            <img className="group-inner-1" alt="" src="/rectangle-17.svg" />
-            <button className="rectangle-div-2">
-              <b className="notes1">Notes</b>
-            </button>
-            <button className="rectangle-div-3">
-              <b className="pay">Pay</b>
-            </button>
-          </div>
           <div className="image">
             <img className="image-68-icon" alt="" src="/image-68@2x.png" />
             <div className="image-child" />
@@ -175,6 +199,12 @@ const HistoryComs = () => {
               src="/unsplashgkc-xm3vy34@2x.png"
             />
           </div>
+          {showNotesPopup && (
+            <NotesPopupCustomer onClose={handleNotesPopupClose} />
+          )}
+          {showPaymentPopup && (
+            <PaymentPopupCustomer onClose={handlePaymentPopupClose} /> // Add this line
+          )}
           {showLogoutPopup && (
             <LogoutPopupCustomer onClose={handleCancelLogout} />
           )}
