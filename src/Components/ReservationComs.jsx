@@ -23,6 +23,17 @@ const ReservationComs = () => {
   const [showBookingPopup, setShowBookingPopup] = useState(false);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
+  const handleTimeChange = (e) => {
+    const newTime = e.target.value;
+    const [hours, minutes] = newTime.split(":").map(Number);
+
+    if ((hours >= 8 && hours < 20) || (hours === 20 && minutes === 0)) {
+      setTime(newTime);
+    } else {
+      alert("Please input time between 08.00-20.00");
+    }
+  };
+
   const handlePhoneNumberChange = (e) => {
     const newPhoneNumber = e.target.value;
     const isNumeric = /^[\d+]+$/.test(newPhoneNumber); // Cek apakah semua karakter adalah angka atau +
@@ -208,7 +219,7 @@ const ReservationComs = () => {
                 type="time"
                 className="time-input"
                 value={time}
-                onChange={(e) => setTime(e.target.value)}
+                onChange={handleTimeChange}
                 disabled={isFormDisabled}
               />
             </div>
