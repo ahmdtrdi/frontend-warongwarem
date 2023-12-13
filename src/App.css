@@ -2121,7 +2121,7 @@ body {
   top: 380px;
   left: 118px;
 }
-.rectangle-div-1 {
+.rectangle-div-2 {
   position: absolute;
   top: 125px;
   left: 476px;
@@ -2134,7 +2134,7 @@ body {
   border-radius: 8px; /* membuat sudut tombol bulat */
   font-size: 15px; /* ukuran font teks tombol */
 }
-.rectangle-div-2 {
+.rectangle-div-3 {
   position: absolute;
   top: 125px;
   left: 370px;
@@ -2228,6 +2228,19 @@ body {
   position: absolute;
   top: 575px;
   left: 118px;
+}
+.rectangle-div-1 {
+  position: absolute;
+  top: 125px;
+  left: 476px;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 40px; /* tinggi tombol */
+  background-color: orange; /* warna latar belakang tombol */
+  color: white; /* warna teks tombol */
+  text-align: center; /* posisi teks di tengah tombol */
+  border-radius: 8px; /* membuat sudut tombol bulat */
+  font-size: 15px; /* ukuran font teks tombol */
 }
 
 /* WAITER GEO PNYA */

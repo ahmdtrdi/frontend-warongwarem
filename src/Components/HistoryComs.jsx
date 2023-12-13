@@ -152,10 +152,10 @@ const HistoryComs = () => {
           </div>
           <div className="rectangle-parent-1">
             <img className="group-inner-1" alt="" src="/rectangle-17.svg" />
-            <button className="rectangle-div-1">
+            <button className="rectangle-div-2">
               <b className="notes1">Notes</b>
             </button>
-            <button className="rectangle-div-2">
+            <button className="rectangle-div-3">
               <b className="pay">Pay</b>
             </button>
           </div>
