@@ -18,8 +18,9 @@ const ReservationComs = () => {
   const isReserveDisabled =
     !fullName.trim() ||
     !phoneNumber.trim() ||
-    (!isRentChecked &&
-      (!date.trim() || !time.trim() || people === "" || tableType === ""));
+    !date.trim() ||
+    !time.trim() ||
+    (isRentChecked && (people !== "" || tableType !== ""));
 
   const handleLogoutClick = () => {
     setShowLogoutPopup(true);
