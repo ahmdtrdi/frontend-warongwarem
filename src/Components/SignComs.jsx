@@ -11,31 +11,46 @@ const SignComs = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleSignUp = async () => {
-    // Tambahkan async
-    if (email && password && password === confirmPassword) {
-      try {
-        // Ganti dengan endpoint dan data yang sesuai
-        const response = await axios.post("", {
-          email,
-          password,
-          confirmPassword,
-        });
+  const registerUser = async (email, password) => {
+    const response = await fetch('http://127.0.0.1:8000/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
 
-        // Lakukan sesuatu dengan response jika perlu
-
-        setShowPopup(true);
-      } catch (error) {
-        console.error(error);
-        // Tampilkan pesan error jika terjadi masalah
-      }
-    } else if (password !== confirmPassword) {
-      alert("Password and confirm password do not match");
-      setConfirmPassword("");
+    if (response.status === 422) {
+      alert('Email already registered');
     } else {
-      alert("Please fill in both email and password");
+      const responseBody = await response.json();
+      console.log(responseBody);
+
+      // Continue with registration process
+      // return response.json();
+      return responseBody;
     }
-  };
+  }
+
+  const handleSignUp = async () => {
+    let response;
+    if (email && password && password === confirmPassword) {
+        try {
+            const response = await registerUser(email, password);
+           
+            if (response && response.message.trim() === 'User registered successfully') {
+                setShowPopup(true);
+            }
+        } catch (error) {
+            console.error('Error in handleSignUp:', error);
+            console.log('Response in handleSignUp:', response);
+        }
+    } else if (password !== confirmPassword) {
+        alert("Password and confirm password do not match");
+        setConfirmPassword("");
+    } else {
+        alert("Please fill in both email and password");
+    }
+};
+
 
   return (
     <div className="login-page" style={{ animation: "fadeIn 1s" }}>
