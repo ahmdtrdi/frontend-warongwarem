@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./pages/LandingPage";
-import About from "./pages/About";
-import Login from "./pages/Login";
-import Sign from "./pages/Sign";
-import Reservation from "./pages/Reservation";
-import CostumerService from "./pages/CostumerService";
+import LandingPage from "./Pages/LandingPage";
+import About from "./Pages/About";
+import Login from "./Pages/Login";
+import Sign from "./Pages/Sign";
+import Reservation from "./Pages/Reservation";
+import CostumerService from "./Pages/CostumerService";
+import History from "./Pages/History";
+import Waiter from "./Pages/Waiter";
+import WT from "./Pages/WT";
 
 const App = () => {
   return (
@@ -17,6 +20,9 @@ const App = () => {
         <Route path="/sign" element={<Sign />} />
         <Route path="/reservation" element={<Reservation />} />
         <Route path="/costumerservice" element={<CostumerService />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/waiter" element={<Waiter />} />
+        <Route path="/wt" element={<WT />} />
       </Routes>
     </Router>
   );
