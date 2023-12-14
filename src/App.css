@@ -2629,6 +2629,11 @@ body {
   border-radius: 8px; /* membuat sudut tombol bulat */
   font-size: 20px; /* ukuran font teks tombol */
 }
+.reserve-button-child.disabled {
+  background-color: gray;
+  color: #ccc;
+  cursor: not-allowed;
+}
 
 /* Logout Pop Up */
 @keyframes zoomIn {
