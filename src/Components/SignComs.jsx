@@ -66,8 +66,13 @@ const SignComs = () => {
       const responseBody = await response.json();
       console.log(responseBody);
 
-      // Continue with registration process
-      // return response.json();
+      // Navigate based on user role
+      if (responseBody.user.role === "waiter") {
+        navigate("/waiter");
+      } else {
+        navigate("/reservation");
+      }
+
       return responseBody;
     }
   };
