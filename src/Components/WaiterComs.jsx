@@ -85,7 +85,7 @@ const WaiterComs = () => {
     // Misalnya, kita ubah status menjadi "Active" untuk semua baris yang dipilih
     const updatedData = dummyData.map((item) => {
       if (selectedRowIds.includes(item.id)) {
-        return { ...item, status: "Unpaid" };
+        return { ...item, status: "Reserved" };
       }
       return item;
     });
@@ -100,7 +100,7 @@ const WaiterComs = () => {
     // Misalnya, kita ubah status menjadi "Inactive" untuk semua baris yang dipilih
     const updatedData = dummyData.map((item) => {
       if (selectedRowIds.includes(item.id)) {
-        return { ...item, status: "Inactive" };
+        return { ...item, status: "Rejected" };
       }
       return item;
     });
