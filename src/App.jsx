@@ -9,6 +9,7 @@ import CostumerService from "./Pages/CostumerService";
 import History from "./Pages/History";
 import Waiter from "./Pages/Waiter";
 import WT from "./Pages/WT";
+import Manager from "./Pages/Manager";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/history" element={<History />} />
         <Route path="/waiter" element={<Waiter />} />
         <Route path="/wt" element={<WT />} />
+        <Route path="/manager" element={<Manager />} />
       </Routes>
     </Router>
   );

@@ -4,7 +4,7 @@ import LogoutPopupCustomer from "./PopLogoutComs"
 import { useNavigate } from 'react-router-dom';
 
 
-const WaiterComs = () => {
+const ManagerComs = () => {
 const navigate = useNavigate();
 const [showLogoutPopup, setShowLogoutPopup] = useState(false);
 
@@ -151,6 +151,7 @@ const [showNotesPopup, setShowNotesPopup] = useState(false);
                                                 <td>{item.name}</td>
                                                 <td>{item.phoneNumber}</td>
                                                 <td>{item.datetime}</td>
+                                                <td></td>
                                                 <td>{item.people}</td>
                                                 <td>{item.tabletype}</td>
                                                 <td>
@@ -194,7 +195,7 @@ const [showNotesPopup, setShowNotesPopup] = useState(false);
       <button className="selectednotif">{`${selectedRowIds.length} Item/s selected`}</button>
       
 
-      <div className="text-wrapper-18">Waiter</div>
+      <div className="textmanager">Manager</div>
       {showLogoutPopup && (
             <LogoutPopupCustomer onClose={handleCancelLogout} />)}
 
@@ -218,4 +219,4 @@ const [showNotesPopup, setShowNotesPopup] = useState(false);
   );
 };
 
-export default WaiterComs;
+export default ManagerComs;
