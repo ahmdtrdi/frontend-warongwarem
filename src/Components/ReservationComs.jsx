@@ -81,15 +81,17 @@ const ReservationComs = () => {
 
       try {
         const jwtToken = localStorage.getItem('jwtToken');
-        /*
+        
         // let accessToken = data;
-        console.log(accessToken);
+        console.log(jwtToken);
+        /*
         if (!accessToken) {
           // Show an error message
           console.error("User is not authenticated");
           return;  // Important to prevent the rest of the function from executing
         }
         */
+        
 
         // let accessToken = localStorage.getItem('jwtToken');
 
