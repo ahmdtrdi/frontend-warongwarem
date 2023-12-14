@@ -1739,7 +1739,7 @@ body {
 }
 
 /* Untuk mengedit desain elemen dengan class "material-symbolstable-bar-icon" */
-.material-symbolstable-bar-icon {
+.material-symbolstable-bar-icon-1 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1911,6 +1911,7 @@ body {
   padding: 10px 29px;
   text-align: center;
   font-size: 16px;
+  cursor: pointer;
   color: var(--color-white);
 }
 

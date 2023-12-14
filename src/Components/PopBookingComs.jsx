@@ -59,7 +59,7 @@ const BookingPopUpCustomerPage = ({
     >
       <div className="booking-popup-customer-page-child" />
       <img
-        className="material-symbolstable-bar-icon"
+        className="material-symbolstable-bar-icon-1"
         alt=""
         src="/materialsymbolstablebar.svg"
       />
