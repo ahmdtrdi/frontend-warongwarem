@@ -2,6 +2,13 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import LogoutPopupCustomer from "./PopLogoutComs";
 import BookingPopUpCustomerPage from "./PopBookingComs";
+import axios from 'axios';
+// import { accessToken } from './LoginComs';
+
+const instance = axios.create({
+  baseURL: 'http://localhost:8000/api',
+  timeout: 5000,
+});
 
 const ReservationComs = () => {
   const navigate = useNavigate();
@@ -12,10 +19,21 @@ const ReservationComs = () => {
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [people, setPeople] = useState("");
-  const [tableType, setTableType] = useState("");
+  const [people, setPeople] = useState("1");
+  const [tableType, setTableType] = useState("Indoor");
   const [showBookingPopup, setShowBookingPopup] = useState(false);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
+
+  const handleTimeChange = (e) => {
+    const newTime = e.target.value;
+    const [hours, minutes] = newTime.split(":").map(Number);
+
+    if ((hours >= 8 && hours < 20) || (hours === 20 && minutes === 0)) {
+      setTime(newTime);
+    } else {
+      alert("Please input time between 08.00-20.00");
+    }
+  };
 
   const handlePhoneNumberChange = (e) => {
     const newPhoneNumber = e.target.value;
@@ -44,8 +62,7 @@ const ReservationComs = () => {
   const isReserveDisabled =
     !fullName.trim() ||
     !phoneNumber.trim() ||
-    (!isRentChecked &&
-      (!date.trim() || !time.trim() || people === "" || tableType === "")) ||
+    (!isRentChecked && (!date.trim() || !time.trim() || !people.trim() || !tableType.trim())) ||
     (isRentChecked && (!date.trim() || !time.trim()));
 
   const handleLogoutClick = () => {
@@ -56,12 +73,53 @@ const ReservationComs = () => {
     setShowLogoutPopup(false);
   };
 
-  const handleReserve = () => {
-    if (!isReserveDisabled) {
+  const handleReserve = async () => {
+    if (isReserveDisabled) {
+      window.alert("Please fill all the fields");
+    } else {
       console.log("Reserve button clicked");
-      setShowBookingPopup(true);
-      setIsFormDisabled(true); // Nonaktifkan form saat popup booking muncul
-    }
+
+      try {
+        const jwtToken = localStorage.getItem('jwtToken');
+        /*
+        // let accessToken = data;
+        console.log(accessToken);
+        if (!accessToken) {
+          // Show an error message
+          console.error("User is not authenticated");
+          return;  // Important to prevent the rest of the function from executing
+        }
+        */
+
+        // let accessToken = localStorage.getItem('jwtToken');
+
+        const response = await axios.post(
+          'http://localhost:8000/api/reservations',
+          {
+            name: fullName,
+            phone_number: phoneNumber,
+            date,
+            time,
+            people: isRentChecked ? 0 : parseInt(people),
+            tableType: isRentChecked ? "Rent the place" : tableType,
+            notes
+          },
+          {
+            headers: {
+              'Authorization': `Bearer ${jwtToken}`,
+            },
+          }
+        );
+
+        // Handle the response as needed
+        console.log(response.data);
+        setShowBookingPopup(true);
+        setIsFormDisabled(true);
+      } catch (error) {
+        // Handle errors, show error messages, etc.
+        console.error('Error creating reservation:', error.message);
+      }
+    };
   };
 
   const handleDoneClick = () => {
@@ -167,7 +225,7 @@ const ReservationComs = () => {
                 type="time"
                 className="time-input"
                 value={time}
-                onChange={(e) => setTime(e.target.value)}
+                onChange={handleTimeChange}
                 disabled={isFormDisabled}
               />
             </div>
@@ -269,7 +327,7 @@ const ReservationComs = () => {
               <button
                 className="reserve-button-child"
                 onClick={handleReserve}
-                disabled={isReserveDisabled}
+              // disabled={isReserveDisabled}
               >
                 <b className="reserve">RESERVE</b>
               </button>

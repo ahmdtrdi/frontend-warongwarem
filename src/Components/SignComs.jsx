@@ -54,14 +54,14 @@ const SignComs = () => {
   };
 
   const registerUser = async (email, password) => {
-    const response = await fetch('http://127.0.0.1:8000/api/auth/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+    const response = await fetch("http://127.0.0.1:8000/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
     });
 
     if (response.status === 422) {
-      alert('Email already registered');
+      alert("Email already registered");
     } else {
       const responseBody = await response.json();
       console.log(responseBody);
@@ -70,29 +70,34 @@ const SignComs = () => {
       // return response.json();
       return responseBody;
     }
-  }
+  };
 
   const handleSignUp = async () => {
     let response;
-    if (email && password && password === confirmPassword) {
-        try {
-            const response = await registerUser(email, password);
-           
-            if (response && response.message.trim() === 'User registered successfully') {
-                setShowPopup(true);
-            }
-        } catch (error) {
-            console.error('Error in handleSignUp:', error);
-            console.log('Response in handleSignUp:', response);
+    if (email && password && password.length >= 10 && confirmPassword) {
+      try {
+        if (password !== confirmPassword) {
+          alert("Password and confirm password do not match");
+          setConfirmPassword("");
+          return; // return early if passwords do not match
         }
-    } else if (password !== confirmPassword) {
-        alert("Password and confirm password do not match");
-        setConfirmPassword("");
-    } else {
-        alert("Please fill in both email and password");
-    }
-};
 
+        const response = await registerUser(email, password);
+
+        if (
+          response &&
+          response.message.trim() === "User registered successfully"
+        ) {
+          setShowPopup(true);
+        }
+      } catch (error) {
+        console.error("Error in handleSignUp:", error);
+        console.log("Response in handleSignUp:", response);
+      }
+    } else {
+      alert("Please fill in both email, password and confirm password");
+    }
+  };
 
   return (
     <div className="login-page" style={{ animation: "fadeIn 1s" }}>
