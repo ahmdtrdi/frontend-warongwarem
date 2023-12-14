@@ -2629,6 +2629,11 @@ body {
   border-radius: 8px; /* membuat sudut tombol bulat */
   font-size: 20px; /* ukuran font teks tombol */
 }
+.reserve-button-child.disabled {
+  background-color: gray;
+  color: #ccc;
+  cursor: not-allowed;
+}
 
 /* Logout Pop Up */
 @keyframes zoomIn {
@@ -3034,7 +3039,7 @@ body {
 }
 
 /* Untuk mengedit desain elemen dengan class "material-symbolstable-bar-icon" */
-.material-symbolstable-bar-icon {
+.material-symbolstable-bar-icon-1 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3206,6 +3211,7 @@ body {
   padding: 10px 29px;
   text-align: center;
   font-size: 16px;
+  cursor: pointer;
   color: var(--color-white);
 }
 
