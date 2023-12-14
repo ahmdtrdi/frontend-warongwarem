@@ -11,18 +11,24 @@ const LogoutPopupCustomer = ({ onClose }) => {
 
   const handleClose = useCallback(() => {
     setIsClosing(true);
-    // Wait for the animation to finish before closing the pop-up
+    // Tunggu animasi selesai sebelum benar-benar menutup pop-up
     setTimeout(onClose, 300);
   }, [onClose]);
 
   return (
     <div className={`logout-popup-customer ${isClosing ? "closing" : ""}`}>
-      <div className={`logout-popup-customer-child ${isClosing ? "closing" : ""}`} />
+      <div
+        className={`logout-popup-customer-child ${isClosing ? "closing" : ""}`}
+      />
       <b className={`are-you-sure ${isClosing ? "closing" : ""}`}>
         Are you sure you want to log out?
       </b>
-      <div className={`logout-popup-customer-item ${isClosing ? "closing" : ""}`} />
-      <div className={`logout-popup-customer-inner ${isClosing ? "closing" : ""}`} />
+      <div
+        className={`logout-popup-customer-item ${isClosing ? "closing" : ""}`}
+      />
+      <div
+        className={`logout-popup-customer-inner ${isClosing ? "closing" : ""}`}
+      />
       <div
         className={`yes-wrapper ${isClosing ? "closing" : ""}`}
         onClick={onFrameContainerClick}
