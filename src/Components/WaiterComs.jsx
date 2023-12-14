@@ -191,9 +191,9 @@ const WaiterComs = () => {
 
       <button className="unselect" onClick={handleUnselectAll}>Unselect</button>
       <button className="reject" onClick={handleReject}>Reject</button>
-      <button className="reserve" onClick={handleReserve}>Assign & Reserve</button>
-      <button className="selected">{`${selectedRowIds.length} Item/s selected`}</button>
-
+      <button className="reserve" onClick={handleReserve}>Reserve</button>
+      <button className="selectednotif">{`${selectedRowIds.length} Item/s selected`}</button>
+      
 
       <div className="text-wrapper-18">Waiter</div>
       {showLogoutPopup && (
@@ -210,6 +210,8 @@ const WaiterComs = () => {
           </div>
         </div>
       )}
+      
+      
     </div>
 
 
