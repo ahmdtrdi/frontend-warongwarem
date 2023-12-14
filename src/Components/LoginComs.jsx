@@ -42,7 +42,17 @@ const LoginComs = () => {
         // Save the JWT to local storage
         localStorage.setItem('jwtToken', jwtToken);
 
-        navigate("/reservation");
+        switch (data.role) {
+          case 'customer':
+            navigate("/reservation");
+            break;
+          case 'waiter':
+            navigate("/waiter");
+            break;
+          case 'manager':
+            navigate("/manager");
+            break;
+        }
       } catch (error) {
         alert(error.message);
       }
@@ -50,7 +60,7 @@ const LoginComs = () => {
       alert("Please fill in both email and password");
     }
   };
-  
+
   return (
     <div className="login-page" style={{ animation: "fadeIn 1s" }}>
       <div className="div">
