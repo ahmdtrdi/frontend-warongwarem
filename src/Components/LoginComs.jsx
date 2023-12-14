@@ -51,7 +51,7 @@ const LoginComs = () => {
       alert("Please fill in both email and password");
     }
   };
-
+  
   return (
     <div className="login-page" style={{ animation: "fadeIn 1s" }}>
       <div className="div">
