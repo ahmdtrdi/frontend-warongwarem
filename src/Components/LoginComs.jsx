@@ -30,7 +30,7 @@ const LoginComs = () => {
   const handleLogin = async () => {
     if (email && password) {
       try {
-        const response = await fetch('http://warongwarem-server.my.id/api/auth/login', {
+        const response = await fetch('https://warongwarem-server.my.id/api/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })

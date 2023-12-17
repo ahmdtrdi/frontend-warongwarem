@@ -54,7 +54,7 @@ const SignComs = () => {
   };
 
   const registerUser = async (email, password) => {
-    const response = await fetch("http://warongwarem-server.my.id/api/auth/register", {
+    const response = await fetch("https://warongwarem-server.my.id/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
