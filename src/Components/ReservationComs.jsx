@@ -103,7 +103,7 @@ const ReservationComs = () => {
             date,
             time,
             people: isRentChecked ? 0 : parseInt(people),
-            tableType: isRentChecked ? "Rent the place" : tableType,
+            table_type: isRentChecked ? "Rent the place" : tableType,
             notes
           },
           {
