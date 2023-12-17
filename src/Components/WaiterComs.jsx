@@ -151,9 +151,8 @@ const WaiterComs = () => {
                   <td>
                     <div
                       onClick={() => handleRowSelect(item.id)}
-                      className={`select-box ${
-                        selectedRowIds.includes(item.id) ? "selected" : ""
-                      }`}
+                      className={`select-box ${selectedRowIds.includes(item.id) ? "selected" : ""
+                        }`}
                     >
                       {selectedRowIds.includes(item.id) ? "✓" : ""}
                     </div>
@@ -169,9 +168,8 @@ const WaiterComs = () => {
                       onChange={(e) =>
                         handleStatusChange(item.id, e.target.value)
                       }
-                      className={`status-dropdown ${
-                        selectedRowIds.includes(item.id) ? "selected" : ""
-                      }`}
+                      className={`status-dropdown ${selectedRowIds.includes(item.id) ? "selected" : ""
+                        }`}
                     >
                       <option value="Requested">Active</option>
                       <option value="Unpaid">Waiting</option>

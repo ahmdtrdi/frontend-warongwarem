@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import LogoutPopupCustomer from "./PopLogoutComs"
 
 const WTComs = () => {
-const navigate = useNavigate();
-const [showLogoutPopup, setShowLogoutPopup] = useState(false);
+  const navigate = useNavigate();
+  const [showLogoutPopup, setShowLogoutPopup] = useState(false);
 
-const handleLogoutClick = () => {
-  setShowLogoutPopup(true);
-};
+  const handleLogoutClick = () => {
+    setShowLogoutPopup(true);
+  };
 
-const handleCancelLogout = () => {
-  setShowLogoutPopup(false);
-  };
+  const handleCancelLogout = () => {
+    setShowLogoutPopup(false);
+  };
 
   // Sample data for the table
   const tableData = [
@@ -48,7 +48,7 @@ const handleCancelLogout = () => {
         />
       </button>
 
-      
+
       <div className="text-wrapper-18">Waiter</div>
 
       <table className="tablewaiter">
@@ -71,8 +71,8 @@ const handleCancelLogout = () => {
       </table>
 
       {showLogoutPopup && (
-            <LogoutPopupCustomer onClose={handleCancelLogout} />
-          )}
+        <LogoutPopupCustomer onClose={handleCancelLogout} />
+      )}
 
     </div>
   );

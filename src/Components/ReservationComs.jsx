@@ -6,7 +6,7 @@ import axios from 'axios';
 // import { accessToken } from './LoginComs';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: 'http://warongwarem-server.my.id/api',
   timeout: 5000,
 });
 
@@ -81,20 +81,22 @@ const ReservationComs = () => {
 
       try {
         const jwtToken = localStorage.getItem('jwtToken');
-        /*
+        
         // let accessToken = data;
-        console.log(accessToken);
+        console.log(jwtToken);
+        /*
         if (!accessToken) {
           // Show an error message
           console.error("User is not authenticated");
           return;  // Important to prevent the rest of the function from executing
         }
         */
+        
 
         // let accessToken = localStorage.getItem('jwtToken');
 
         const response = await axios.post(
-          'http://localhost:8000/api/reservations',
+          'http://warongwarem-server.my.id/api/reservations',
           {
             name: fullName,
             phone_number: phoneNumber,
