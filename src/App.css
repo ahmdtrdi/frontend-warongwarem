@@ -859,11 +859,7 @@ body {
   text-align: center;
 }
 
-/* Pop Up Sign Up*/
-
-
 /* Waiter TES */
-
 .waiter-window {
   background-color: #f6f6f6;
   height: 946px;
@@ -949,7 +945,12 @@ body {
   background-color: #ffffff;
   border: 1px solid;
   border-color: transparent;
-  border-image: linear-gradient(to bottom, rgb(199.89, 199.89, 199.89), rgb(150.96, 150.96, 150.96)) 1;
+  border-image: linear-gradient(
+      to bottom,
+      rgb(199.89, 199.89, 199.89),
+      rgb(150.96, 150.96, 150.96)
+    )
+    1;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px #00000033;
   height: 14px;
@@ -1037,7 +1038,12 @@ body {
   background-color: #f49b32;
   border: 1px solid;
   border-color: transparent;
-  border-image: linear-gradient(to bottom, rgb(199.89, 199.89, 199.89), rgb(150.96, 150.96, 150.96)) 1;
+  border-image: linear-gradient(
+      to bottom,
+      rgb(199.89, 199.89, 199.89),
+      rgb(150.96, 150.96, 150.96)
+    )
+    1;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px #00000033;
   height: 14px;
@@ -1430,7 +1436,7 @@ body {
 }
 
 .waiter-window .assign-reserve-wrapper {
-  background-color: #6CC824;
+  background-color: #6cc824;
   border-radius: 4px;
   height: 40px;
   position: fixed;
@@ -1706,7 +1712,6 @@ body {
   left: 15px;
   width: 68px;
   height: 50px;
- 
 }
 
 .waiter-window .Logoutwaiter {
@@ -1853,7 +1858,7 @@ body {
 .yes-wrapper.closing,
 .logout-popup-customer.closing {
   animation: zoomOut 0.3s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 /* table Indoor */
@@ -1865,7 +1870,8 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.tableindoor th, .tableindoor td {
+.tableindoor th,
+.tableindoor td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
@@ -1887,9 +1893,6 @@ body {
 
 /* Add more styles as needed for the remaining elements in your component */
 
-
-
-
 /* waitertable */
 
 /* Add your existing styles here */
@@ -1902,7 +1905,8 @@ body {
   top: 700px;
 }
 
-.tablewaiter th, .tablewaiter td {
+.tablewaiter th,
+.tablewaiter td {
   border: 1px solid #ddd;
   padding: 5px;
   text-align: left;
@@ -1924,7 +1928,6 @@ body {
 }
 
 /* Add more styles as needed for the remaining elements in your component */
-
 
 /* waiter lefry */
 
@@ -2009,10 +2012,17 @@ body {
   border-radius: 8px;
 }
 
+<<<<<<< HEAD
+.waiter-window .unselect {
+  left: 280px;
+  background-color: rgba(255, 151, 15, 0.933);
+  top: 650px;
+=======
 .waiter-window .unselect{
   left: 370px;
   background-color: rgba(222, 135, 22, 0.933);
   top: 630px;
+>>>>>>> 27a7450f3a6657353b18be6e45aa3d6f64438e90
   position: fixed;
 }
 
@@ -2054,7 +2064,8 @@ body {
   margin-top: 10px;
 }
 
-.waiter-window th, td {
+.waiter-window th,
+td {
   border: 1px;
   padding: 8px;
   text-align: left;
@@ -2088,9 +2099,13 @@ body {
 
 .waiter-window .status-dropdown .selected {
   background-color: #4caf50;
+<<<<<<< HEAD
+   color: white;
+=======
+>>>>>>> 27a7450f3a6657353b18be6e45aa3d6f64438e90
 }
 
-.waiter-window .rectangle-table { 
+.waiter-window .rectangle-table {
   background-color: #5e5e5e;
   border-radius: 10px;
   height: 800px;
@@ -2155,6 +2170,8 @@ body {
   animation: zoomOut 0.3s;
   animation-fill-mode: forwards;
 }
+
+/* Pop Up Sign Up*/
 @keyframes zoomIn {
   from {
     transform: scale(0);

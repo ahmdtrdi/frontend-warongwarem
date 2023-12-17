@@ -30,27 +30,49 @@ const LoginComs = () => {
   const handleLogin = async () => {
     if (email && password) {
       try {
-        const response = await fetch('http://localhost:8000/api/auth/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password })
+        const response = await fetch("http://localhost:8000/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
         });
 
-        const data = await response.json();
-        const jwtToken = data.access_token;
+        // Check if the response is JSON
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          const data = await response.json();
+          const jwtToken = data.access_token;
+          localStorage.setItem("jwtToken", jwtToken);
 
-        // Save the JWT to local storage
-        localStorage.setItem('jwtToken', jwtToken);
+          // Navigate based on user role
+          if (data.user.role === "waiter") {
+            navigate("/waiter");
+          } else {
+            navigate("/reservation");
+          }
+        } else {
+          const errorText = await response.text();
+          console.error("Login API Error:", errorText);
 
-        navigate("/reservation");
+          // Add a breakpoint here to inspect the response and error message in the browser debugger
+          debugger;
+
+          alert("Login failed. Please check the console for more details.");
+        }
       } catch (error) {
-        alert(error.message);
+        console.error("Error in handleLogin:", error);
+
+        // Add a breakpoint here to inspect the error object in the browser debugger
+        debugger;
+
+        alert(
+          "An error occurred while trying to log in. Please try again later."
+        );
       }
     } else {
       alert("Please fill in both email and password");
     }
   };
-  
+
   return (
     <div className="login-page" style={{ animation: "fadeIn 1s" }}>
       <div className="div">
