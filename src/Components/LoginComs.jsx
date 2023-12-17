@@ -36,25 +36,37 @@ const LoginComs = () => {
           body: JSON.stringify({ email, password })
         });
 
-        const data = await response.json();
-        const jwtToken = data.access_token;
+        // Check if the response is JSON
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          const data = await response.json();
+          const jwtToken = data.access_token;
+          localStorage.setItem("jwtToken", jwtToken);
 
-        // Save the JWT to local storage
-        localStorage.setItem('jwtToken', jwtToken);
-
-        switch (data.role) {
-          case 'customer':
-            navigate("/reservation");
-            break;
-          case 'waiter':
+          // Navigate based on user role
+          if (data.user.role === "waiter") {
             navigate("/waiter");
-            break;
-          case 'manager':
-            navigate("/manager");
-            break;
+          } else {
+            navigate("/reservation");
+          }
+        } else {
+          const errorText = await response.text();
+          console.error("Login API Error:", errorText);
+
+          // Add a breakpoint here to inspect the response and error message in the browser debugger
+          debugger;
+
+          alert("Login failed. Please check the console for more details.");
         }
       } catch (error) {
-        alert(error.message);
+        console.error("Error in handleLogin:", error);
+
+        // Add a breakpoint here to inspect the error object in the browser debugger
+        debugger;
+
+        alert(
+          "An error occurred while trying to log in. Please try again later."
+        );
       }
     } else {
       alert("Please fill in both email and password");

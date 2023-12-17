@@ -1,8 +1,6 @@
-
 import React, { useState } from "react";
-import LogoutPopupCustomer from "./PopLogoutComs"
-import { useNavigate } from 'react-router-dom';
-
+import LogoutPopupCustomer from "./PopLogoutComs";
+import { useNavigate } from "react-router-dom";
 
 const WaiterComs = () => {
   const navigate = useNavigate();
@@ -30,8 +28,26 @@ const WaiterComs = () => {
 
   // Data dummy untuk tabel
   const [dummyData, setDummyData] = useState([
-    { id: 1, name: "Geo Tumbel", phoneNumber: +6285656244133, datetime: "2023-11-11 14:40:00", people: 2, tabletype: "Outdoor", status: "Requested", notes: "Tidak Pake Saos" },
-    { id: 2, name: "Made Indra", phoneNumber: +1231231231231, datetime: "2023-11-12 14:00:00", people: "Rent the place", tabletype: "-", status: "Unpaid", notes: "Tidak Pake Sambal!!!" },
+    {
+      id: 1,
+      name: "Geo Tumbel",
+      phoneNumber: +6285656244133,
+      datetime: "2023-11-11 14:40:00",
+      people: 2,
+      tabletype: "Outdoor",
+      status: "Requested",
+      notes: "Tidak Pake Saos",
+    },
+    {
+      id: 2,
+      name: "Made Indra",
+      phoneNumber: +1231231231231,
+      datetime: "2023-11-12 14:00:00",
+      people: "Rent the place",
+      tabletype: "-",
+      status: "Unpaid",
+      notes: "Tidak Pake Sambal!!!",
+    },
     // Tambahkan data dummy lainnya sesuai kebutuhan
   ]);
 
@@ -69,7 +85,7 @@ const WaiterComs = () => {
     // Misalnya, kita ubah status menjadi "Active" untuk semua baris yang dipilih
     const updatedData = dummyData.map((item) => {
       if (selectedRowIds.includes(item.id)) {
-        return { ...item, status: "Unpaid" };
+        return { ...item, status: "Reserved" };
       }
       return item;
     });
@@ -84,7 +100,7 @@ const WaiterComs = () => {
     // Misalnya, kita ubah status menjadi "Inactive" untuk semua baris yang dipilih
     const updatedData = dummyData.map((item) => {
       if (selectedRowIds.includes(item.id)) {
-        return { ...item, status: "Inactive" };
+        return { ...item, status: "Rejected" };
       }
       return item;
     });
@@ -95,25 +111,15 @@ const WaiterComs = () => {
 
   return (
     <div className="waiter-window">
-      <div className="overlap">
-      </div>
+      <div className="overlap"></div>
       <button class="logoutwaiter-btn" onClick={handleLogoutClick}>
-        <img
-          class="Logoutwaiter"
-          alt="Power Off"
-          src="/poweroff-1@2x.png" />
+        <img class="Logoutwaiter" alt="Power Off" src="/poweroff-1@2x.png" />
       </button>
       <button class="tablewaiter-btn" onClick={() => navigate("/wt")}>
-        <img
-          class="Tablewaiter"
-          alt="Table"
-          src="icsharptablerestaurant.svg" />
+        <img class="Tablewaiter" alt="Table" src="icsharptablerestaurant.svg" />
       </button>
       <button class="mainwaiter-btn">
-        <img
-          class="Mainwaiter"
-          alt="Main"
-          src="group.svg" />
+        <img class="Mainwaiter" alt="Main" src="group.svg" />
       </button>
       <div className="rectangle-table" />
       <div className="overlap-group">
@@ -121,11 +127,13 @@ const WaiterComs = () => {
           <table>
             <thead>
               <tr>
-                <th><input
-                  type="checkbox"
-                  checked={selectedRowIds.length === dummyData.length}
-                  onChange={handleSelectAll}
-                /></th>
+                <th>
+                  <input
+                    type="checkbox"
+                    checked={selectedRowIds.length === dummyData.length}
+                    onChange={handleSelectAll}
+                  />
+                </th>
                 <th>Name</th>
 
                 <th>Phone Number</th>
@@ -143,7 +151,8 @@ const WaiterComs = () => {
                   <td>
                     <div
                       onClick={() => handleRowSelect(item.id)}
-                      className={`select-box ${selectedRowIds.includes(item.id) ? "selected" : ""}`}
+                      className={`select-box ${selectedRowIds.includes(item.id) ? "selected" : ""
+                        }`}
                     >
                       {selectedRowIds.includes(item.id) ? "✓" : ""}
                     </div>
@@ -156,8 +165,11 @@ const WaiterComs = () => {
                   <td>
                     <select
                       value={item.status}
-                      onChange={(e) => handleStatusChange(item.id, e.target.value)}
-                      className={`status-dropdown ${selectedRowIds.includes(item.id) ? "selected" : ""}`}
+                      onChange={(e) =>
+                        handleStatusChange(item.id, e.target.value)
+                      }
+                      className={`status-dropdown ${selectedRowIds.includes(item.id) ? "selected" : ""
+                        }`}
                     >
                       <option value="Requested">Active</option>
                       <option value="Unpaid">Waiting</option>
@@ -167,12 +179,14 @@ const WaiterComs = () => {
                     </select>
                   </td>
 
-                  <td><button
-                    className="Notesbtn"
-                    onClick={() => handleShowNotes(item.notes)}
-                  >
-                    Notes
-                  </button></td>
+                  <td>
+                    <button
+                      className="Notesbtn"
+                      onClick={() => handleShowNotes(item.notes)}
+                    >
+                      Notes
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -180,24 +194,25 @@ const WaiterComs = () => {
         </div>
       </div>
 
-
-
-
       <div className="rectangle-3" />
       <p className="warong-warem">
         <span className="span">Warong</span>
         <span className="text-wrapper-14">Warem</span>
       </p>
 
-      <button className="unselect" onClick={handleUnselectAll}>Unselect</button>
-      <button className="reject" onClick={handleReject}>Reject</button>
-      <button className="reserve" onClick={handleReserve}>Reserve</button>
-      <button className="selectednotif">{`${selectedRowIds.length} Item/s selected`}</button>
-      
+      <button className="unselect" onClick={handleUnselectAll}>
+        Unselect
+      </button>
+      <button className="reject" onClick={handleReject}>
+        Reject
+      </button>
+      <button className="reserve" onClick={handleReserve}>
+        Assign & Reserve
+      </button>
+      <button className="selected">{`${selectedRowIds.length} Item/s selected`}</button>
 
       <div className="text-wrapper-18">Waiter</div>
-      {showLogoutPopup && (
-        <LogoutPopupCustomer onClose={handleCancelLogout} />)}
+      {showLogoutPopup && <LogoutPopupCustomer onClose={handleCancelLogout} />}
 
       {/* Notes Popup */}
       {showNotesPopup && (
@@ -210,11 +225,7 @@ const WaiterComs = () => {
           </div>
         </div>
       )}
-      
-      
     </div>
-
-
   );
 };
 
