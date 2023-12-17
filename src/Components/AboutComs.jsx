@@ -71,11 +71,7 @@ const AboutComs = () => {
                 <div className="home">Sign Up</div>
               </button>
             </div>
-            <img
-              className="project-status-icon"
-              alt=""
-              src="/project-status.svg"
-            />
+             
           </div>
           <b className="warongwarem">
             <span>Warong</span>

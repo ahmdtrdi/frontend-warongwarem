@@ -46,11 +46,13 @@ body {
   justify-content: flex-start;
   gap: 55px;
 }
+/*
 .project-status-icon {
   position: relative;
   width: 13.87px;
   height: 13.38px;
 }
+*/
 .navber {
   position: relative;
   width: 100%;
@@ -2012,17 +2014,10 @@ body {
   border-radius: 8px;
 }
 
-<<<<<<< HEAD
-.waiter-window .unselect {
-  left: 280px;
-  background-color: rgba(255, 151, 15, 0.933);
-  top: 650px;
-=======
 .waiter-window .unselect{
   left: 370px;
   background-color: rgba(222, 135, 22, 0.933);
   top: 630px;
->>>>>>> 27a7450f3a6657353b18be6e45aa3d6f64438e90
   position: fixed;
 }
 
@@ -2099,10 +2094,6 @@ td {
 
 .waiter-window .status-dropdown .selected {
   background-color: #4caf50;
-<<<<<<< HEAD
-   color: white;
-=======
->>>>>>> 27a7450f3a6657353b18be6e45aa3d6f64438e90
 }
 
 .waiter-window .rectangle-table {
