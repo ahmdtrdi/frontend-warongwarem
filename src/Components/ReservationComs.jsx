@@ -6,7 +6,7 @@ import axios from 'axios';
 // import { accessToken } from './LoginComs';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: 'http://warongwarem-server.my.id/api',
   timeout: 5000,
 });
 
@@ -96,7 +96,7 @@ const ReservationComs = () => {
         // let accessToken = localStorage.getItem('jwtToken');
 
         const response = await axios.post(
-          'http://localhost:8000/api/reservations',
+          'http://warongwarem-server.my.id/api/reservations',
           {
             name: fullName,
             phone_number: phoneNumber,
