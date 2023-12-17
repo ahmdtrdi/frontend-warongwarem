@@ -59,36 +59,40 @@ const SignComs = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
     });
-
+  
+    const responseBody = await response.json();
+  
     if (response.status === 422) {
-      alert("Email already registered");
+      alert(responseBody.error); // Display the specific error message from the backend
     } else {
-      const responseBody = await response.json();
       console.log(responseBody);
-
+  
+      // Store the access token for future authenticated requests
+      localStorage.setItem('access_token', responseBody.access_token);
+  
       // Navigate based on user role
       if (responseBody.user.role === "waiter") {
         navigate("/waiter");
       } else {
         navigate("/reservation");
       }
-
+  
       return responseBody;
     }
   };
-
+  
   const handleSignUp = async () => {
     let response;
-    if (email && password && password.length >= 10 && confirmPassword) {
+    if (email && password && confirmPassword) {
       try {
         if (password !== confirmPassword) {
           alert("Password and confirm password do not match");
           setConfirmPassword("");
           return; // return early if passwords do not match
         }
-
-        const response = await registerUser(email, password);
-
+  
+        response = await registerUser(email, password);
+  
         if (
           response &&
           response.message.trim() === "User registered successfully"
